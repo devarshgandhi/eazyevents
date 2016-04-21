@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="themes/Bootstrap.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script>
+    $(document).bind('mobileinit', function() {
+        $.mobile.changePage.defaults.changeHash = false;
+        $.mobile.hashListeningEnabled = false;
+        $.mobile.pushStateEnabled = false;
+    });
+    </script>
+    <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    <script>
+    var name = "harsh";
+    $(function() {
+        $('#gr').on('submit', function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'post',
+                url: 'http://rubypals.com/phonegapstyle/phpcode/login.php',
+                data: $('#gr').serialize(),
+                error: function(xhr, status) {
+                    console.log(xhr);
+                },
+                success: function(data, xhr) {
+                    name = $("#ID").val();
+                    console.log("Username: ", name);
+                    console.log(data);
+                    console.log("xhr", xhr);
+                    console.log("localStorage: ", window.localStorage);
+                    sessionStorage.setItem("xhrfromlogin", name);
+                    sessionStorage.setItem("data", data);
+                    if (data.status == "Prof") {
+                        window.location.href = "prohome.html";
+                    } else if (data.status == "Student") {
+                        window.location.href = "stuhome.html";
+                    } else /*if(data.status=="Wrong Username or Password")*/ {
+                        $("#error_container").append("* Wrong Username or Password");
+                    }
+                }
+
+            });
+
+        });
+
+    });
+    </script>
+</head>
+
+<body>
+    <div data-role="page" data-theme="a">
+        <div data-role="content" data-theme="a">
+            <a href="signup.html" rel="external" data-role="button" data-icon="user">Signup</a>
+            <h2>Login- Eazy Events</h2>
+            <form id="gr" name="gr">
+                <div data-role="fieldcontain">
+                    <label for="name">Username:</label>
+                    <input type="text" name="ID" id="ID" value="" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="name">Password:</label>
+                    <input type="password" name="password" id="password" value="" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="slider2" style="width:200px;">Account Type:</label>
+                    <select name="slider2" id="flip-c" data-role="slider" style="width:100px;">
+                        <option value="student">User </option>
+                        <option value="professor">Admin </option>
+                    </select>
+                </div>
+                <div data-role="fieldcontain" id="error_container" style="color:red;display:block">
+                </div>
+                <div class="ui-body ui-body-b">
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <button type="submit" data-theme="e">Cancel</button>
+                        </div>
+                        <div class="ui-block-b">
+                            <button type="submit" data-theme="f">Login</button>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
