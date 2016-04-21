@@ -1,0 +1,25 @@
+{
+  "name": "eazyevents",
+  "version": "1.0.0",
+  "description": "easyevent project",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devarshgandhi/eazyevents.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devarshgandhi/eazyevents/issues"
+  },
+  "homepage": "https://github.com/devarshgandhi/eazyevents#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-serve": "^0.1.6"
+  }
+}
