@@ -100,7 +100,7 @@
 
     });
     $(function() {
-        var name = localStorage.getItem("xhrfromlogin");
+        var name = sessionStorage.getItem("xhrfromlogin");
         console.log("name:", name)
         $('#fromLoginUserName').val(name);
         var keyvalue = 0;
