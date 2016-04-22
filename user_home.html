@@ -16,6 +16,9 @@
         //console.log("the data: ", (localStorage.getItem("xhrfromlogin")));
         //localStorage.setItem("xhrfromlogin",xhr);
         var name = sessionStorage.getItem("xhrfromlogin");
+        if(!name){
+            window.location.href = "index.html";
+        }
         $('#usernamefromlogin').append(name);
 
          $.getJSON("http://rubypals.com/phonegapstyle/phpcode/get_course.php", function(data) {
@@ -35,19 +38,21 @@
             //$(".event-details").hide();
         });
 
-         function logout(){
-                console.log("logout is called");
-                sessionStorage.removeItem("xhrfromlogin");
-            }
+
 
     });
+     function logout(){
+                console.log("logout is called");
+                sessionStorage.clear();
+                window.location.href = "index.html";
+            }
 </script>
 </head>
 
 <body>
     <div data-role="page" data-theme="d" style="background-color:#000;">
         <div data-role="header" data-position="inline">
-            <h1 id="usernamefromlogin">Welcome&nbsp;</h1>
+            <h1 id="usernamefromlogin">Welcome,&nbsp;</h1>
             <div data-role="navbar">
                 <ul>
                     <li><a href="user_home.html" rel="external" data-icon="home" class="ui-btn-active">Home</a></li>

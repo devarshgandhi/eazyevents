@@ -28,11 +28,11 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     <link href="styles/framework-style.css" rel="stylesheet" type="text/css">
     <link href="styles/framework.css" rel="stylesheet" type="text/css">
-    <link href="styles/bxslider.css" rel="stylesheet" type="text/css">
-    <link href="styles/swipebox.css" rel="stylesheet" type="text/css">
+    <!-- <link href="styles/bxslider.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="styles/swipebox.css" rel="stylesheet" type="text/css">
     <link href="styles/icons.css" rel="stylesheet" type="text/css">
     <link href="styles/retina.css" rel="stylesheet" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
-    <script src="scripts/jquery.min.js" type="text/javascript"></script>
+     --><script src="scripts/jquery.min.js" type="text/javascript"></script>
     <script src="scripts/snap.js" type="text/javascript"></script>
     <script src="scripts/hammer.js" type="text/javascript"></script>
     <script src="scripts/jquery-ui-min.js" type="text/javascript"></script>
@@ -48,9 +48,6 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <style>
-    body {
-        font-family: 'Roboto', sans-serif;
-    }
     </style>
     <script>
     // $(document).ready(function(){
@@ -78,12 +75,13 @@
     //         });
 
 
-    $(document).ready(function() {
         var name = sessionStorage.getItem("xhrfromlogin");
-        console.log("name:",name)
+        console.log("name:",name);
         $('#fromLoginUName').append(name);
+        if(!name){
+            window.location.href = "index.html";
+        }
 
-    });
     // event details from the backend -- Needed
     var events = [];
     $(document).on("pagebeforecreate", function() {
@@ -167,6 +165,11 @@
         });
 
     });
+     function logout(){
+                console.log("logout is called");
+                sessionStorage.clear();
+                window.location.href = "index.html";
+            }
     // $(document).on("pagecreate", function(event) {
 
     //     $(".ui-btn").val("");
@@ -186,7 +189,9 @@
                     </ul>
                 </div>
             </div>
+            <a href="#" rel="external" data-role="button" data-theme="a" data-icon="gear" style="color:#fff; width:30px; height:10px; margin-left:90%;" onclick="logout()"><span style="color:#000; font-size:8px;">Logout</span></a>
             <div data-role="content" data-theme="b" style="background-color:#000;">
+
                 <br/>
                 <br/>
                 <div data-role="controlgroup" data-type="vertical">

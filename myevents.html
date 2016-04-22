@@ -48,7 +48,9 @@
         $('#fromLoginUserName').val(name);
         $('#usernamefromlogin').append(name);
 
-
+         if(!name){
+            window.location.href = "index.html";
+        }
         // $.post("http://rubypals.com/phonegapstyle/phpcode/eventsregisteredbyuser.php", {
         //         fromLoginUserName: name
         //     },
@@ -100,7 +102,11 @@
 
     });
 
-
+     function logout(){
+                console.log("logout is called");
+                sessionStorage.clear();
+                window.location.href = "index.html";
+            }
 
     $(document).ready(function() {
         $("button").click(function() {
@@ -132,7 +138,9 @@
                 </ul>
             </div>
         </div>
+        <a href="#" rel="external" data-role="button" data-theme="a" data-icon="gear" style="color:#fff; width:30px; height:10px; margin-left:90%;" onclick="logout()"><span style="color:#000; font-size:8px;">Logout</span></a>
         <div data-role="content" data-theme="a" style="background-color:#000;">
+
             <div>
                 <table class="table" style="width:100%;color:white;">
                     <thead class="thead-inverse" style="width:100%;color:white;">
