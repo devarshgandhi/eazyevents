@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Compute my grade</title>
+    <link rel="stylesheet" href="themes/Bootstrap.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="scripts/jquery.timepicker.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="calendar-win2k-cold-1.css" title="win2k-cold-1" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="scripts/jquery.timepicker.js"></script>
+    <script>
+    $(document).bind('mobileinit', function() {
+        $.mobile.changePage.defaults.changeHash = false;
+        $.mobile.hashListeningEnabled = false;
+        $.mobile.pushStateEnabled = false;
+    });
+    </script>
+    <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    <!-- main calendar program -->
+    <script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script>
+    <!-- <script type="text/javascript" src="calendar.js"></script> -->
+    <!-- language for the calendar -->
+    <!-- <script type="text/javascript" src="lang/calendar-en.js"></script>
+ -->
+    <!-- the following script defines the Calendar.setup helper function, which makes
+       adding a calendar a matter of 1 or 2 lines of code. -->
+    <!--   <script type="text/javascript" src="calendar-setup.js"></script> -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+    </style>
+    <script>
+    $(function() {
+          var name = localStorage.getItem("xhrfromlogin");
+        console.log("name:", name)
+        $('#fromLoginUserName').val(name);
+        $('#date').datepicker();
+        //  $('.dp').on('change', function(){
+        //     $('.datepicker').hide();
+        // });
+        $('#time').timepicker();
+        $('#gr').on('submit', function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'post',
+                url: 'http://rubypals.com/phonegapstyle/phpcode/adduser.php',
+                data: $('#gr').serialize(),
+                error: function(xhr, status) {
+                    console.log(status);
+                    alert("Event Created!");
+                },
+                success: function(data, xhr) {
+                    console.log(data.status);
+                    alert("Event Created!");
+
+                }
+
+            });
+
+        });
+    });
+
+
+    </script>
+</head>
+
+<body>
+    <div data-role="page" data-theme="f" style="background-color:#000;">
+        <div data-role="header" data-position="inline">
+            <h1>Eazy Events!</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="admin_home.html" rel="external" data-icon="home" class="ui-btn-active">Home</a></li>
+                    <li><a href="admin_all_event.html" rel="external" data-icon="gear">All Event</a></li>
+                    <li><a href="admin_my_event.html" rel="external" data-icon="check">My Events</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" data-theme="d" style="background-color:#000;">
+            <a href="file:///Users/leona/hello/www/index.html" rel="external" data-role="button" data-theme="a" data-icon="gear" style="color:#fff; width:30px; height:10px; margin-left:90%;"><span style="color:#000; font-size:8px;">Logout</span></a>
+            <h2 style="color:#fff;">Welcome Username!</h2>
+            <a href="#popupLogin" data-rel="popup" data-role="button" data-icon="check" data-theme="d" data-transition="pop">Create Event</a>
+            <div data-role="popup" id="popupMenu" data-theme="a">
+                <div data-role="popup" id="popupLogin" data-theme="c" class="ui-corner-all">
+                    <form id="gr" name="gr">
+                        <div style="padding:10px 20px;">
+                            <h3>Create Event</h3>
+                            <label for="un" class="ui-hidden-accessible">Event Name:</label>
+                            <input type="text" name="class" id="class" value="" placeholder="Event Name" data-theme="a">
+                            <label for="un" class="ui-hidden-accessible">Location</label>
+                            <input type="text" name="location" id="location" value="" placeholder="Location" data-theme="a">
+                            <label for="textarea" class="ui-hidden-accessible">Description:</label>
+                            <input type="textarea" name="description" id="description" value="" placeholder="Description" data-theme="a">
+                            <label for="un" class="ui-hidden-accessible">Date:</label>
+                            <input type="text" name="date" class="dp" id="date" placeholder="yyyy-dd-mm">
+                            <label for="un" class="ui-hidden-accessible">Time:</label>
+                            <input type="text" name="time" id="time" value="" placeholder="Time" data-theme="a">
+                            <label for="un" class="ui-hidden-accessible">Capacity:</label>
+                            <input type="text" name="capacity" id="capacity" value="" placeholder="Capacity" data-theme="a">
+                            <input type="hidden" name="fromLoginUserName" id="fromLoginUserName" value="" placeholder="Capacity" data-theme="a">
+                            <button type="submit" data-theme="b" data-icon="check">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <a href="set1.html" rel="external" data-role="button" data-icon="user">View All</a>
+            <a href="student.html" rel="external" data-role="button" data-icon="user">View Created Events</a>
+            <p>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
