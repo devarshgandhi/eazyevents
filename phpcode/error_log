@@ -1,0 +1,3319 @@
+[17-Apr-2016 19:43:57 America/Denver] 04/27/2016
+[17-Apr-2016 19:45:02 America/Denver] 04/13/2016
+[18-Apr-2016 10:50:54 America/Denver] 
+[18-Apr-2016 10:50:54 America/Denver] 
+[18-Apr-2016 10:50:54 America/Denver] 
+[18-Apr-2016 10:57:59 America/Denver] a1
+[18-Apr-2016 10:58:00 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 10:58:00 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 10:58:00 America/Denver] sadf
+[18-Apr-2016 10:58:00 America/Denver] sadf
+[18-Apr-2016 10:58:00 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+)
+
+[18-Apr-2016 11:12:12 America/Denver] a1
+[18-Apr-2016 11:12:12 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 11:12:12 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 11:12:12 America/Denver] sadf
+[18-Apr-2016 11:12:12 America/Denver] sadf
+[18-Apr-2016 11:12:12 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+)
+
+[18-Apr-2016 11:12:31 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 11:12:31 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[18-Apr-2016 11:12:31 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[18-Apr-2016 11:13:52 America/Denver] a1
+[18-Apr-2016 11:13:52 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 11:13:52 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 11:13:52 America/Denver] sadf
+[18-Apr-2016 11:13:52 America/Denver] sadf
+[18-Apr-2016 11:13:52 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+)
+
+[18-Apr-2016 11:13:55 America/Denver] a1
+[18-Apr-2016 11:13:55 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 11:13:55 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 11:13:55 America/Denver] sadf
+[18-Apr-2016 11:13:55 America/Denver] sadf
+[18-Apr-2016 11:13:55 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+)
+
+[18-Apr-2016 11:16:48 America/Denver] dhaivat
+[18-Apr-2016 11:16:48 America/Denver] a@b.c
+[18-Apr-2016 11:16:55 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 11:16:55 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[18-Apr-2016 11:16:55 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[18-Apr-2016 11:23:56 America/Denver] 
+[18-Apr-2016 11:23:56 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[18-Apr-2016 11:23:56 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 11:23:56 America/Denver] 0 results
+[18-Apr-2016 11:23:56 America/Denver] Array
+(
+)
+
+[18-Apr-2016 11:23:59 America/Denver] 
+[18-Apr-2016 11:23:59 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[18-Apr-2016 11:23:59 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 11:23:59 America/Denver] 0 results
+[18-Apr-2016 11:23:59 America/Denver] Array
+(
+)
+
+[18-Apr-2016 14:44:57 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 14:45:00 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 14:45:00 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[18-Apr-2016 14:45:00 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[18-Apr-2016 14:45:06 America/Denver] a1
+[18-Apr-2016 14:45:06 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 14:45:06 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 14:45:06 America/Denver] sadf
+[18-Apr-2016 14:45:06 America/Denver] sadf
+[18-Apr-2016 14:45:06 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+)
+
+[18-Apr-2016 14:45:10 America/Denver] a1
+[18-Apr-2016 14:45:10 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 14:45:10 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 14:45:10 America/Denver] sadf
+[18-Apr-2016 14:45:10 America/Denver] sadf
+[18-Apr-2016 14:45:10 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+)
+
+[18-Apr-2016 14:45:46 America/Denver] a1
+[18-Apr-2016 14:45:46 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 14:45:46 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 14:45:46 America/Denver] sadf
+[18-Apr-2016 14:45:46 America/Denver] sadf
+[18-Apr-2016 14:45:46 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+)
+
+[18-Apr-2016 14:46:03 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 14:46:03 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[18-Apr-2016 14:46:03 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[18-Apr-2016 14:46:07 America/Denver] a1
+[18-Apr-2016 14:46:07 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 14:46:07 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 14:46:07 America/Denver] sadf
+[18-Apr-2016 14:46:07 America/Denver] sadf
+[18-Apr-2016 14:46:07 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+)
+
+[18-Apr-2016 21:43:49 America/Denver] d1
+[18-Apr-2016 21:43:49 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= 'd1'
+[18-Apr-2016 21:43:49 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 21:43:49 America/Denver] san jose
+[18-Apr-2016 21:43:49 America/Denver] san jose
+[18-Apr-2016 21:43:49 America/Denver] san jose
+[18-Apr-2016 21:43:49 America/Denver] san jose
+[18-Apr-2016 21:43:49 America/Denver] san jose
+[18-Apr-2016 21:43:49 America/Denver] san jose
+[18-Apr-2016 21:43:49 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 28
+            [eventname] => h1
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 200
+        )
+
+    [1] => Array
+        (
+            [eventid] => 29
+            [eventname] => h2
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [2] => Array
+        (
+            [eventid] => 30
+            [eventname] => h3
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [3] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 32
+            [eventname] => a111q
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [5] => Array
+        (
+            [eventid] => 33
+            [eventname] => aaazzz
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 2:00am
+            [capacity] => 200
+        )
+
+)
+
+[18-Apr-2016 21:44:47 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 21:44:47 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[18-Apr-2016 21:44:47 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[18-Apr-2016 21:44:57 America/Denver] d1
+[18-Apr-2016 21:44:57 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= 'd1'
+[18-Apr-2016 21:44:57 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 21:44:57 America/Denver] san jose
+[18-Apr-2016 21:44:57 America/Denver] san jose
+[18-Apr-2016 21:44:57 America/Denver] san jose
+[18-Apr-2016 21:44:57 America/Denver] san jose
+[18-Apr-2016 21:44:57 America/Denver] san jose
+[18-Apr-2016 21:44:57 America/Denver] san jose
+[18-Apr-2016 21:44:57 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 28
+            [eventname] => h1
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 200
+        )
+
+    [1] => Array
+        (
+            [eventid] => 29
+            [eventname] => h2
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [2] => Array
+        (
+            [eventid] => 30
+            [eventname] => h3
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [3] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 32
+            [eventname] => a111q
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [5] => Array
+        (
+            [eventid] => 33
+            [eventname] => aaazzz
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 2:00am
+            [capacity] => 200
+        )
+
+)
+
+[18-Apr-2016 21:45:17 America/Denver] d1
+[18-Apr-2016 21:45:17 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= 'd1'
+[18-Apr-2016 21:45:17 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 21:45:17 America/Denver] san jose
+[18-Apr-2016 21:45:17 America/Denver] san jose
+[18-Apr-2016 21:45:17 America/Denver] san jose
+[18-Apr-2016 21:45:17 America/Denver] san jose
+[18-Apr-2016 21:45:17 America/Denver] san jose
+[18-Apr-2016 21:45:17 America/Denver] san jose
+[18-Apr-2016 21:45:17 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 28
+            [eventname] => h1
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 200
+        )
+
+    [1] => Array
+        (
+            [eventid] => 29
+            [eventname] => h2
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [2] => Array
+        (
+            [eventid] => 30
+            [eventname] => h3
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [3] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 32
+            [eventname] => a111q
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [5] => Array
+        (
+            [eventid] => 33
+            [eventname] => aaazzz
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 2:00am
+            [capacity] => 200
+        )
+
+)
+
+[18-Apr-2016 21:46:59 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 21:46:59 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[18-Apr-2016 21:46:59 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[18-Apr-2016 21:47:04 America/Denver] a1
+[18-Apr-2016 21:47:04 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 21:47:04 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 21:47:04 America/Denver] sadf
+[18-Apr-2016 21:47:04 America/Denver] sadf
+[18-Apr-2016 21:47:04 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+)
+
+[18-Apr-2016 21:47:51 America/Denver] a1
+[18-Apr-2016 21:47:51 America/Denver] 2
+[18-Apr-2016 21:47:51 America/Denver] CMPE-274
+[18-Apr-2016 21:48:03 America/Denver] a1
+[18-Apr-2016 21:48:03 America/Denver] 25
+[18-Apr-2016 21:48:03 America/Denver] Job Fair
+[18-Apr-2016 21:48:11 America/Denver] a1
+[18-Apr-2016 21:48:11 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 21:48:11 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 21:48:11 America/Denver] sadf
+[18-Apr-2016 21:48:11 America/Denver] sadf
+[18-Apr-2016 21:48:11 America/Denver] San Jose
+[18-Apr-2016 21:48:11 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+)
+
+[18-Apr-2016 22:02:06 America/Denver] a1
+[18-Apr-2016 22:02:06 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 22:02:06 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 22:02:06 America/Denver] sadf
+[18-Apr-2016 22:02:06 America/Denver] sadf
+[18-Apr-2016 22:02:06 America/Denver] San Jose
+[18-Apr-2016 22:02:06 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+)
+
+[18-Apr-2016 22:02:46 America/Denver] a1
+[18-Apr-2016 22:02:46 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 22:02:46 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 22:02:46 America/Denver] sadf
+[18-Apr-2016 22:02:46 America/Denver] sadf
+[18-Apr-2016 22:02:46 America/Denver] San Jose
+[18-Apr-2016 22:02:46 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+)
+
+[18-Apr-2016 22:05:02 America/Denver] a1
+[18-Apr-2016 22:05:02 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 22:05:02 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 22:05:02 America/Denver] sadf
+[18-Apr-2016 22:05:02 America/Denver] sadf
+[18-Apr-2016 22:05:02 America/Denver] San Jose
+[18-Apr-2016 22:05:02 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+)
+
+[18-Apr-2016 22:06:16 America/Denver] a1
+[18-Apr-2016 22:06:16 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 22:06:16 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 22:06:16 America/Denver] sadf
+[18-Apr-2016 22:06:16 America/Denver] sadf
+[18-Apr-2016 22:06:16 America/Denver] San Jose
+[18-Apr-2016 22:06:16 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+)
+
+[18-Apr-2016 22:06:40 America/Denver] a1
+[18-Apr-2016 22:06:40 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 22:06:40 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 22:06:40 America/Denver] sadf
+[18-Apr-2016 22:06:40 America/Denver] sadf
+[18-Apr-2016 22:06:40 America/Denver] San Jose
+[18-Apr-2016 22:06:40 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+)
+
+[18-Apr-2016 22:08:29 America/Denver] a1
+[18-Apr-2016 22:08:29 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 22:08:29 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 22:08:29 America/Denver] sadf
+[18-Apr-2016 22:08:29 America/Denver] sadf
+[18-Apr-2016 22:08:29 America/Denver] San Jose
+[18-Apr-2016 22:08:29 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+)
+
+[18-Apr-2016 22:16:42 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 22:16:42 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[18-Apr-2016 22:16:42 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[18-Apr-2016 22:16:51 America/Denver] d1
+[18-Apr-2016 22:16:51 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= 'd1'
+[18-Apr-2016 22:16:51 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 22:16:51 America/Denver] san jose
+[18-Apr-2016 22:16:51 America/Denver] san jose
+[18-Apr-2016 22:16:51 America/Denver] san jose
+[18-Apr-2016 22:16:51 America/Denver] san jose
+[18-Apr-2016 22:16:51 America/Denver] san jose
+[18-Apr-2016 22:16:51 America/Denver] san jose
+[18-Apr-2016 22:16:51 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 28
+            [eventname] => h1
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 200
+        )
+
+    [1] => Array
+        (
+            [eventid] => 29
+            [eventname] => h2
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [2] => Array
+        (
+            [eventid] => 30
+            [eventname] => h3
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [3] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 32
+            [eventname] => a111q
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [5] => Array
+        (
+            [eventid] => 33
+            [eventname] => aaazzz
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 2:00am
+            [capacity] => 200
+        )
+
+)
+
+[18-Apr-2016 22:19:04 America/Denver] d1
+[18-Apr-2016 22:19:04 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= 'd1'
+[18-Apr-2016 22:19:04 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 22:19:04 America/Denver] san jose
+[18-Apr-2016 22:19:04 America/Denver] san jose
+[18-Apr-2016 22:19:04 America/Denver] san jose
+[18-Apr-2016 22:19:04 America/Denver] san jose
+[18-Apr-2016 22:19:04 America/Denver] san jose
+[18-Apr-2016 22:19:04 America/Denver] san jose
+[18-Apr-2016 22:19:04 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 28
+            [eventname] => h1
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 200
+        )
+
+    [1] => Array
+        (
+            [eventid] => 29
+            [eventname] => h2
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [2] => Array
+        (
+            [eventid] => 30
+            [eventname] => h3
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [3] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 32
+            [eventname] => a111q
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [5] => Array
+        (
+            [eventid] => 33
+            [eventname] => aaazzz
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 2:00am
+            [capacity] => 200
+        )
+
+)
+
+[18-Apr-2016 22:21:44 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 22:21:44 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[18-Apr-2016 22:21:44 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[18-Apr-2016 22:22:09 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 22:22:09 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[18-Apr-2016 22:22:09 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[18-Apr-2016 22:22:16 America/Denver] a1
+[18-Apr-2016 22:22:16 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 22:22:16 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 22:22:16 America/Denver] sadf
+[18-Apr-2016 22:22:16 America/Denver] sadf
+[18-Apr-2016 22:22:16 America/Denver] San Jose
+[18-Apr-2016 22:22:16 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+)
+
+[18-Apr-2016 22:23:35 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 7
+[18-Apr-2016 22:23:35 America/Denver] 
+[18-Apr-2016 22:23:36 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[18-Apr-2016 22:23:36 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 22:23:36 America/Denver] sadf
+[18-Apr-2016 22:23:36 America/Denver] sdf
+[18-Apr-2016 22:23:36 America/Denver] San Jose
+[18-Apr-2016 22:23:36 America/Denver] San Jose
+[18-Apr-2016 22:23:36 America/Denver] San Jose,CA
+[18-Apr-2016 22:23:36 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[18-Apr-2016 22:26:18 America/Denver] a1
+[18-Apr-2016 22:26:18 America/Denver] 27
+[18-Apr-2016 22:26:18 America/Denver] event1
+[18-Apr-2016 22:26:23 America/Denver] a1
+[18-Apr-2016 22:26:23 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 22:26:23 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 22:26:23 America/Denver] sadf
+[18-Apr-2016 22:26:23 America/Denver] sadf
+[18-Apr-2016 22:26:23 America/Denver] San Jose
+[18-Apr-2016 22:26:23 America/Denver] San Jose,CA
+[18-Apr-2016 22:26:23 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+)
+
+[18-Apr-2016 22:27:38 America/Denver] a1
+[18-Apr-2016 22:27:38 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 22:27:38 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 22:27:38 America/Denver] sadf
+[18-Apr-2016 22:27:38 America/Denver] sadf
+[18-Apr-2016 22:27:38 America/Denver] San Jose
+[18-Apr-2016 22:27:38 America/Denver] San Jose,CA
+[18-Apr-2016 22:27:38 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+)
+
+[18-Apr-2016 22:30:50 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 7
+[18-Apr-2016 22:30:50 America/Denver] 
+[18-Apr-2016 22:30:50 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[18-Apr-2016 22:30:50 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 22:30:50 America/Denver] sadf
+[18-Apr-2016 22:30:50 America/Denver] sdf
+[18-Apr-2016 22:30:50 America/Denver] San Jose
+[18-Apr-2016 22:30:50 America/Denver] San Jose
+[18-Apr-2016 22:30:50 America/Denver] San Jose,CA
+[18-Apr-2016 22:30:50 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[18-Apr-2016 22:34:30 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 7
+[18-Apr-2016 22:34:30 America/Denver] 
+[18-Apr-2016 22:34:30 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[18-Apr-2016 22:34:30 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 22:34:30 America/Denver] sadf
+[18-Apr-2016 22:34:30 America/Denver] sdf
+[18-Apr-2016 22:34:30 America/Denver] San Jose
+[18-Apr-2016 22:34:30 America/Denver] San Jose
+[18-Apr-2016 22:34:30 America/Denver] San Jose,CA
+[18-Apr-2016 22:34:30 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[18-Apr-2016 22:35:01 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 7
+[18-Apr-2016 22:35:01 America/Denver] 
+[18-Apr-2016 22:35:01 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[18-Apr-2016 22:35:01 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 22:35:01 America/Denver] sadf
+[18-Apr-2016 22:35:01 America/Denver] sdf
+[18-Apr-2016 22:35:01 America/Denver] San Jose
+[18-Apr-2016 22:35:01 America/Denver] San Jose
+[18-Apr-2016 22:35:01 America/Denver] San Jose,CA
+[18-Apr-2016 22:35:01 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[18-Apr-2016 22:35:43 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 7
+[18-Apr-2016 22:35:43 America/Denver] 
+[18-Apr-2016 22:35:43 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[18-Apr-2016 22:35:43 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 22:35:43 America/Denver] sadf
+[18-Apr-2016 22:35:43 America/Denver] sdf
+[18-Apr-2016 22:35:43 America/Denver] San Jose
+[18-Apr-2016 22:35:43 America/Denver] San Jose
+[18-Apr-2016 22:35:43 America/Denver] San Jose,CA
+[18-Apr-2016 22:35:43 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[18-Apr-2016 22:36:01 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 7
+[18-Apr-2016 22:36:01 America/Denver] 
+[18-Apr-2016 22:36:01 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[18-Apr-2016 22:36:01 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 22:36:01 America/Denver] sadf
+[18-Apr-2016 22:36:01 America/Denver] sdf
+[18-Apr-2016 22:36:01 America/Denver] San Jose
+[18-Apr-2016 22:36:01 America/Denver] San Jose
+[18-Apr-2016 22:36:01 America/Denver] San Jose,CA
+[18-Apr-2016 22:36:01 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[18-Apr-2016 22:37:14 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 7
+[18-Apr-2016 22:37:14 America/Denver] 
+[18-Apr-2016 22:37:14 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[18-Apr-2016 22:37:14 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 22:37:14 America/Denver] sadf
+[18-Apr-2016 22:37:14 America/Denver] sdf
+[18-Apr-2016 22:37:14 America/Denver] San Jose
+[18-Apr-2016 22:37:14 America/Denver] San Jose
+[18-Apr-2016 22:37:14 America/Denver] San Jose,CA
+[18-Apr-2016 22:37:14 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[18-Apr-2016 22:37:46 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 7
+[18-Apr-2016 22:37:46 America/Denver] 
+[18-Apr-2016 22:37:46 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[18-Apr-2016 22:37:46 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 22:37:46 America/Denver] sadf
+[18-Apr-2016 22:37:46 America/Denver] sdf
+[18-Apr-2016 22:37:46 America/Denver] San Jose
+[18-Apr-2016 22:37:46 America/Denver] San Jose
+[18-Apr-2016 22:37:46 America/Denver] San Jose,CA
+[18-Apr-2016 22:37:46 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[18-Apr-2016 22:38:04 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 7
+[18-Apr-2016 22:38:04 America/Denver] 
+[18-Apr-2016 22:38:04 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[18-Apr-2016 22:38:04 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 22:38:04 America/Denver] sadf
+[18-Apr-2016 22:38:04 America/Denver] sdf
+[18-Apr-2016 22:38:04 America/Denver] San Jose
+[18-Apr-2016 22:38:04 America/Denver] San Jose
+[18-Apr-2016 22:38:04 America/Denver] San Jose,CA
+[18-Apr-2016 22:38:04 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[18-Apr-2016 22:42:37 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 7
+[18-Apr-2016 22:42:37 America/Denver] 
+[18-Apr-2016 22:42:37 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[18-Apr-2016 22:42:37 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 22:42:37 America/Denver] sadf
+[18-Apr-2016 22:42:37 America/Denver] sdf
+[18-Apr-2016 22:42:37 America/Denver] San Jose
+[18-Apr-2016 22:42:37 America/Denver] San Jose
+[18-Apr-2016 22:42:37 America/Denver] San Jose,CA
+[18-Apr-2016 22:42:37 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[18-Apr-2016 22:53:12 America/Denver] 
+[18-Apr-2016 22:53:12 America/Denver] 
+[18-Apr-2016 22:53:12 America/Denver] 
+[18-Apr-2016 22:54:24 America/Denver] a1
+[18-Apr-2016 22:54:24 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 22:54:24 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 22:54:24 America/Denver] sadf
+[18-Apr-2016 22:54:24 America/Denver] sadf
+[18-Apr-2016 22:54:24 America/Denver] San Jose
+[18-Apr-2016 22:54:24 America/Denver] San Jose,CA
+[18-Apr-2016 22:54:24 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+)
+
+[18-Apr-2016 23:00:08 America/Denver] d1
+[18-Apr-2016 23:00:08 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= 'd1'
+[18-Apr-2016 23:00:08 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 23:00:08 America/Denver] san jose
+[18-Apr-2016 23:00:08 America/Denver] san jose
+[18-Apr-2016 23:00:08 America/Denver] san jose
+[18-Apr-2016 23:00:08 America/Denver] san jose
+[18-Apr-2016 23:00:08 America/Denver] san jose
+[18-Apr-2016 23:00:08 America/Denver] san jose
+[18-Apr-2016 23:00:08 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 28
+            [eventname] => h1
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 200
+        )
+
+    [1] => Array
+        (
+            [eventid] => 29
+            [eventname] => h2
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [2] => Array
+        (
+            [eventid] => 30
+            [eventname] => h3
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [3] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 32
+            [eventname] => a111q
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [5] => Array
+        (
+            [eventid] => 33
+            [eventname] => aaazzz
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 2:00am
+            [capacity] => 200
+        )
+
+)
+
+[18-Apr-2016 23:43:22 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 7
+[18-Apr-2016 23:43:22 America/Denver] 
+[18-Apr-2016 23:43:22 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[18-Apr-2016 23:43:22 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 23:43:22 America/Denver] 0 results
+[18-Apr-2016 23:43:22 America/Denver] Array
+(
+)
+
+[18-Apr-2016 23:43:31 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 7
+[18-Apr-2016 23:43:31 America/Denver] 
+[18-Apr-2016 23:43:31 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[18-Apr-2016 23:43:31 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 23:43:31 America/Denver] 0 results
+[18-Apr-2016 23:43:31 America/Denver] Array
+(
+)
+
+[18-Apr-2016 23:43:48 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 7
+[18-Apr-2016 23:43:48 America/Denver] 
+[18-Apr-2016 23:43:48 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[18-Apr-2016 23:43:48 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 23:43:48 America/Denver] 0 results
+[18-Apr-2016 23:43:48 America/Denver] Array
+(
+)
+
+[18-Apr-2016 23:43:57 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 7
+[18-Apr-2016 23:43:57 America/Denver] 
+[18-Apr-2016 23:43:57 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[18-Apr-2016 23:43:57 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 23:43:57 America/Denver] 0 results
+[18-Apr-2016 23:43:57 America/Denver] Array
+(
+)
+
+[18-Apr-2016 23:44:04 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 7
+[18-Apr-2016 23:44:04 America/Denver] 
+[18-Apr-2016 23:44:04 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[18-Apr-2016 23:44:04 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 23:44:04 America/Denver] 0 results
+[18-Apr-2016 23:44:04 America/Denver] Array
+(
+)
+
+[18-Apr-2016 23:44:09 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 7
+[18-Apr-2016 23:44:09 America/Denver] 
+[18-Apr-2016 23:44:09 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[18-Apr-2016 23:44:09 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 23:44:09 America/Denver] 0 results
+[18-Apr-2016 23:44:09 America/Denver] Array
+(
+)
+
+[18-Apr-2016 23:47:05 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 7
+[18-Apr-2016 23:47:05 America/Denver] 
+[18-Apr-2016 23:47:05 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[18-Apr-2016 23:47:05 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 23:47:05 America/Denver] 0 results
+[18-Apr-2016 23:47:05 America/Denver] Array
+(
+)
+
+[18-Apr-2016 23:48:12 America/Denver] PHP Notice:  Undefined index: ID in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 8
+[18-Apr-2016 23:48:12 America/Denver] PHP Notice:  Undefined index: password in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 9
+[18-Apr-2016 23:48:12 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 23:48:35 America/Denver] PHP Notice:  Undefined variable: sql in /home7/rubypals/public_html/phonegapstyle/phpcode/student.php on line 13
+[18-Apr-2016 23:48:35 America/Denver] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/student.php on line 13
+[18-Apr-2016 23:48:35 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home7/rubypals/public_html/phonegapstyle/phpcode/student.php on line 19
+[18-Apr-2016 23:48:35 America/Denver] PHP Notice:  Trying to get property of non-object in /home7/rubypals/public_html/phonegapstyle/phpcode/student.php on line 20
+[18-Apr-2016 23:48:35 America/Denver] PHP Notice:  Undefined variable: row in /home7/rubypals/public_html/phonegapstyle/phpcode/student.php on line 29
+[18-Apr-2016 23:49:03 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 7
+[18-Apr-2016 23:49:03 America/Denver] 
+[18-Apr-2016 23:49:03 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[18-Apr-2016 23:49:03 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[18-Apr-2016 23:49:03 America/Denver] sadf
+[18-Apr-2016 23:49:03 America/Denver] sdf
+[18-Apr-2016 23:49:03 America/Denver] San Jose
+[18-Apr-2016 23:49:03 America/Denver] San Jose
+[18-Apr-2016 23:49:03 America/Denver] San Jose,CA
+[18-Apr-2016 23:49:03 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[18-Apr-2016 23:52:10 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 23:52:10 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[18-Apr-2016 23:52:10 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[18-Apr-2016 23:52:42 America/Denver] a1
+[18-Apr-2016 23:52:42 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 23:52:42 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 23:52:42 America/Denver] sadf
+[18-Apr-2016 23:52:42 America/Denver] sadf
+[18-Apr-2016 23:52:42 America/Denver] San Jose
+[18-Apr-2016 23:52:42 America/Denver] San Jose,CA
+[18-Apr-2016 23:52:42 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+)
+
+[18-Apr-2016 23:52:53 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[18-Apr-2016 23:52:53 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[18-Apr-2016 23:52:53 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[18-Apr-2016 23:52:58 America/Denver] a1
+[18-Apr-2016 23:52:58 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 23:52:58 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 23:52:58 America/Denver] sadf
+[18-Apr-2016 23:52:58 America/Denver] sadf
+[18-Apr-2016 23:52:58 America/Denver] San Jose
+[18-Apr-2016 23:52:58 America/Denver] San Jose,CA
+[18-Apr-2016 23:52:58 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+)
+
+[18-Apr-2016 23:53:07 America/Denver] a1
+[18-Apr-2016 23:53:07 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[18-Apr-2016 23:53:07 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 23:53:07 America/Denver] sadf
+[18-Apr-2016 23:53:07 America/Denver] sadf
+[18-Apr-2016 23:53:07 America/Denver] San Jose
+[18-Apr-2016 23:53:07 America/Denver] San Jose,CA
+[18-Apr-2016 23:53:07 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+)
+
+[18-Apr-2016 23:54:02 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 7
+[18-Apr-2016 23:54:02 America/Denver] 
+[18-Apr-2016 23:54:02 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[18-Apr-2016 23:54:02 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 23:54:02 America/Denver] 0 results
+[18-Apr-2016 23:54:02 America/Denver] Array
+(
+)
+
+[18-Apr-2016 23:55:50 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 7
+[18-Apr-2016 23:55:50 America/Denver] 
+[18-Apr-2016 23:55:50 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[18-Apr-2016 23:55:50 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[18-Apr-2016 23:55:50 America/Denver] 0 results
+[18-Apr-2016 23:55:50 America/Denver] Array
+(
+)
+
+[19-Apr-2016 10:44:04 America/Denver] 
+[19-Apr-2016 10:44:04 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[19-Apr-2016 10:44:04 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[19-Apr-2016 10:44:04 America/Denver] 0 results
+[19-Apr-2016 10:44:04 America/Denver] Array
+(
+)
+
+[19-Apr-2016 10:44:09 America/Denver] 
+[19-Apr-2016 10:44:09 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[19-Apr-2016 10:44:09 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[19-Apr-2016 10:44:09 America/Denver] 0 results
+[19-Apr-2016 10:44:09 America/Denver] Array
+(
+)
+
+[19-Apr-2016 10:44:44 America/Denver] 
+[19-Apr-2016 10:44:44 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[19-Apr-2016 10:44:44 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[19-Apr-2016 10:44:44 America/Denver] 0 results
+[19-Apr-2016 10:44:44 America/Denver] Array
+(
+)
+
+[19-Apr-2016 22:47:30 America/Denver] a1
+[19-Apr-2016 22:47:30 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[19-Apr-2016 22:47:30 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[19-Apr-2016 22:47:30 America/Denver] sadf
+[19-Apr-2016 22:47:30 America/Denver] sadf
+[19-Apr-2016 22:47:30 America/Denver] San Jose
+[19-Apr-2016 22:47:30 America/Denver] San Jose,CA
+[19-Apr-2016 22:47:30 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+)
+
+[19-Apr-2016 22:48:07 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[19-Apr-2016 22:48:07 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[19-Apr-2016 22:48:07 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[19-Apr-2016 22:48:07 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[19-Apr-2016 22:48:07 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[19-Apr-2016 22:48:07 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[19-Apr-2016 22:48:07 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[19-Apr-2016 22:48:07 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[19-Apr-2016 22:48:07 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[19-Apr-2016 22:48:59 America/Denver] a1
+[19-Apr-2016 22:48:59 America/Denver] 31
+[19-Apr-2016 22:48:59 America/Denver] h5
+[19-Apr-2016 22:49:11 America/Denver] a1
+[19-Apr-2016 22:49:11 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[19-Apr-2016 22:49:11 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[19-Apr-2016 22:49:11 America/Denver] sadf
+[19-Apr-2016 22:49:11 America/Denver] sadf
+[19-Apr-2016 22:49:11 America/Denver] San Jose
+[19-Apr-2016 22:49:11 America/Denver] San Jose,CA
+[19-Apr-2016 22:49:11 America/Denver] san jose
+[19-Apr-2016 22:49:11 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+    [4] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+        )
+
+)
+
+[19-Apr-2016 22:52:09 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 7
+[19-Apr-2016 22:52:09 America/Denver] 
+[19-Apr-2016 22:52:09 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[19-Apr-2016 22:52:09 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[19-Apr-2016 22:52:09 America/Denver] 0 results
+[19-Apr-2016 22:52:09 America/Denver] Array
+(
+)
+
+[19-Apr-2016 22:53:00 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 7
+[19-Apr-2016 22:53:00 America/Denver] 
+[19-Apr-2016 22:53:00 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[19-Apr-2016 22:53:00 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[19-Apr-2016 22:53:00 America/Denver] 0 results
+[19-Apr-2016 22:53:00 America/Denver] Array
+(
+)
+
+[19-Apr-2016 22:53:18 America/Denver] PHP Notice:  Undefined index: fromLoginUserName in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 7
+[19-Apr-2016 22:53:18 America/Denver] 
+[19-Apr-2016 22:53:18 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[19-Apr-2016 22:53:18 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[19-Apr-2016 22:53:18 America/Denver] 0 results
+[19-Apr-2016 22:53:18 America/Denver] Array
+(
+)
+
+[21-Apr-2016 01:23:16 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[21-Apr-2016 01:23:16 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[21-Apr-2016 01:23:16 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[21-Apr-2016 20:09:32 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[21-Apr-2016 20:09:32 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[21-Apr-2016 20:09:32 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[21-Apr-2016 20:10:36 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[21-Apr-2016 20:10:36 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[21-Apr-2016 20:10:36 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[21-Apr-2016 20:11:10 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[21-Apr-2016 20:11:10 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[21-Apr-2016 20:11:10 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[21-Apr-2016 20:13:43 America/Denver] a1
+[21-Apr-2016 20:13:43 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[21-Apr-2016 20:13:43 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[21-Apr-2016 20:13:43 America/Denver] sadf
+[21-Apr-2016 20:13:43 America/Denver] sadf
+[21-Apr-2016 20:13:43 America/Denver] San Jose
+[21-Apr-2016 20:13:43 America/Denver] San Jose,CA
+[21-Apr-2016 20:13:43 America/Denver] san jose
+[21-Apr-2016 20:13:43 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+    [4] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+        )
+
+)
+
+[21-Apr-2016 20:14:49 America/Denver] a1
+[21-Apr-2016 20:14:49 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[21-Apr-2016 20:14:49 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[21-Apr-2016 20:14:49 America/Denver] sadf
+[21-Apr-2016 20:14:49 America/Denver] sadf
+[21-Apr-2016 20:14:49 America/Denver] San Jose
+[21-Apr-2016 20:14:49 America/Denver] San Jose,CA
+[21-Apr-2016 20:14:49 America/Denver] san jose
+[21-Apr-2016 20:14:49 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+    [4] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+        )
+
+)
+
+[21-Apr-2016 20:24:15 America/Denver] a1
+[21-Apr-2016 20:24:15 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[21-Apr-2016 20:24:15 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[21-Apr-2016 20:24:15 America/Denver] sadf
+[21-Apr-2016 20:24:15 America/Denver] sadf
+[21-Apr-2016 20:24:15 America/Denver] San Jose
+[21-Apr-2016 20:24:15 America/Denver] San Jose,CA
+[21-Apr-2016 20:24:15 America/Denver] san jose
+[21-Apr-2016 20:24:15 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+    [4] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+        )
+
+)
+
+[21-Apr-2016 20:28:04 America/Denver] a1
+[21-Apr-2016 20:28:04 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[21-Apr-2016 20:28:04 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[21-Apr-2016 20:28:04 America/Denver] sadf
+[21-Apr-2016 20:28:04 America/Denver] sadf
+[21-Apr-2016 20:28:04 America/Denver] San Jose
+[21-Apr-2016 20:28:04 America/Denver] San Jose,CA
+[21-Apr-2016 20:28:04 America/Denver] san jose
+[21-Apr-2016 20:28:04 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+    [4] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+        )
+
+)
+
+[21-Apr-2016 21:30:52 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[21-Apr-2016 21:30:52 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[21-Apr-2016 21:30:52 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[21-Apr-2016 21:33:30 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[21-Apr-2016 21:33:30 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[21-Apr-2016 21:33:30 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[21-Apr-2016 21:33:44 America/Denver] a1
+[21-Apr-2016 21:33:44 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[21-Apr-2016 21:33:44 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[21-Apr-2016 21:33:44 America/Denver] sadf
+[21-Apr-2016 21:33:44 America/Denver] sadf
+[21-Apr-2016 21:33:44 America/Denver] San Jose
+[21-Apr-2016 21:33:44 America/Denver] San Jose,CA
+[21-Apr-2016 21:33:44 America/Denver] san jose
+[21-Apr-2016 21:33:44 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+    [4] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+        )
+
+)
+
+[21-Apr-2016 22:40:46 America/Denver] 
+[21-Apr-2016 22:40:46 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= ''
+[21-Apr-2016 22:40:46 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[21-Apr-2016 22:40:46 America/Denver] 0 results
+[21-Apr-2016 22:40:46 America/Denver] Array
+(
+)
+
+[21-Apr-2016 23:01:44 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[21-Apr-2016 23:01:44 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[21-Apr-2016 23:01:44 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[21-Apr-2016 23:01:52 America/Denver] cisco
+[21-Apr-2016 23:01:52 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'cisco'
+[21-Apr-2016 23:01:52 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[21-Apr-2016 23:01:52 America/Denver] sadf
+[21-Apr-2016 23:01:52 America/Denver] sdf
+[21-Apr-2016 23:01:52 America/Denver] San Jose
+[21-Apr-2016 23:01:52 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+        )
+
+)
+
+[21-Apr-2016 23:07:40 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[21-Apr-2016 23:07:40 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[21-Apr-2016 23:07:40 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[21-Apr-2016 23:11:46 America/Denver] cisco
+[21-Apr-2016 23:11:46 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'cisco'
+[21-Apr-2016 23:11:46 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[21-Apr-2016 23:11:46 America/Denver] sadf
+[21-Apr-2016 23:11:46 America/Denver] sdf
+[21-Apr-2016 23:11:46 America/Denver] San Jose
+[21-Apr-2016 23:11:46 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+        )
+
+)
+
+[21-Apr-2016 23:19:25 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[21-Apr-2016 23:19:25 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[21-Apr-2016 23:19:25 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[21-Apr-2016 23:19:38 America/Denver] a1
+[21-Apr-2016 23:19:38 America/Denver] SELECT T1.eventid as eventid, T1.eventname as eventname, T2.locationname as location, 
+                T2.date1 as eventdate, T2.time1 as eventtime
+                FROM registered T1 JOIN eventstable T2 ON T1.eventid= T2.ID where userid= 'a1'
+[21-Apr-2016 23:19:38 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventsregisteredbyuser.php on line 26
+[21-Apr-2016 23:19:38 America/Denver] sadf
+[21-Apr-2016 23:19:38 America/Denver] sadf
+[21-Apr-2016 23:19:38 America/Denver] San Jose
+[21-Apr-2016 23:19:38 America/Denver] San Jose,CA
+[21-Apr-2016 23:19:38 America/Denver] san jose
+[21-Apr-2016 23:19:38 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [1] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+        )
+
+    [2] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+        )
+
+    [3] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+        )
+
+    [4] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+        )
+
+)
+
+[21-Apr-2016 23:20:15 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[21-Apr-2016 23:20:15 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[21-Apr-2016 23:20:15 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[21-Apr-2016 23:28:03 America/Denver] d1
+[21-Apr-2016 23:28:03 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= 'd1'
+[21-Apr-2016 23:28:03 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[21-Apr-2016 23:28:03 America/Denver] san jose
+[21-Apr-2016 23:28:03 America/Denver] san jose
+[21-Apr-2016 23:28:03 America/Denver] san jose
+[21-Apr-2016 23:28:03 America/Denver] san jose
+[21-Apr-2016 23:28:03 America/Denver] san jose
+[21-Apr-2016 23:28:03 America/Denver] san jose
+[21-Apr-2016 23:28:03 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 28
+            [eventname] => h1
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 200
+        )
+
+    [1] => Array
+        (
+            [eventid] => 29
+            [eventname] => h2
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [2] => Array
+        (
+            [eventid] => 30
+            [eventname] => h3
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [3] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 32
+            [eventname] => a111q
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [5] => Array
+        (
+            [eventid] => 33
+            [eventname] => aaazzz
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 2:00am
+            [capacity] => 200
+        )
+
+)
+
+[21-Apr-2016 23:28:47 America/Denver] d1
+[21-Apr-2016 23:28:47 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= 'd1'
+[21-Apr-2016 23:28:47 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[21-Apr-2016 23:28:47 America/Denver] san jose
+[21-Apr-2016 23:28:47 America/Denver] san jose
+[21-Apr-2016 23:28:47 America/Denver] san jose
+[21-Apr-2016 23:28:47 America/Denver] san jose
+[21-Apr-2016 23:28:47 America/Denver] san jose
+[21-Apr-2016 23:28:47 America/Denver] san jose
+[21-Apr-2016 23:28:47 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 28
+            [eventname] => h1
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 200
+        )
+
+    [1] => Array
+        (
+            [eventid] => 29
+            [eventname] => h2
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [2] => Array
+        (
+            [eventid] => 30
+            [eventname] => h3
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [3] => Array
+        (
+            [eventid] => 31
+            [eventname] => h5
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 32
+            [eventname] => a111q
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 1:00am
+            [capacity] => 200
+        )
+
+    [5] => Array
+        (
+            [eventid] => 33
+            [eventname] => aaazzz
+            [locationname] => san jose
+            [date1] => 0000-00-00
+            [time1] => 2:00am
+            [capacity] => 200
+        )
+
+)
+
+[21-Apr-2016 23:31:59 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[21-Apr-2016 23:31:59 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[21-Apr-2016 23:31:59 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[21-Apr-2016 23:41:46 America/Denver] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 18
+[21-Apr-2016 23:41:46 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 22
+[21-Apr-2016 23:41:46 America/Denver] PHP Notice:  Undefined index: name1 in /home7/rubypals/public_html/phonegapstyle/phpcode/login.php on line 24
+[21-Apr-2016 23:42:03 America/Denver] 
+[21-Apr-2016 23:42:03 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[21-Apr-2016 23:42:03 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[21-Apr-2016 23:42:03 America/Denver] sadf
+[21-Apr-2016 23:42:03 America/Denver] sdf
+[21-Apr-2016 23:42:03 America/Denver] San Jose
+[21-Apr-2016 23:42:03 America/Denver] San Jose
+[21-Apr-2016 23:42:03 America/Denver] San Jose,CA
+[21-Apr-2016 23:42:03 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[21-Apr-2016 23:42:12 America/Denver] 
+[21-Apr-2016 23:42:12 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[21-Apr-2016 23:42:12 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[21-Apr-2016 23:42:12 America/Denver] sadf
+[21-Apr-2016 23:42:12 America/Denver] sdf
+[21-Apr-2016 23:42:12 America/Denver] San Jose
+[21-Apr-2016 23:42:12 America/Denver] San Jose
+[21-Apr-2016 23:42:12 America/Denver] San Jose,CA
+[21-Apr-2016 23:42:12 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[21-Apr-2016 23:42:47 America/Denver] 
+[21-Apr-2016 23:42:47 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[21-Apr-2016 23:42:47 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[21-Apr-2016 23:42:47 America/Denver] sadf
+[21-Apr-2016 23:42:47 America/Denver] sdf
+[21-Apr-2016 23:42:47 America/Denver] San Jose
+[21-Apr-2016 23:42:47 America/Denver] San Jose
+[21-Apr-2016 23:42:47 America/Denver] San Jose,CA
+[21-Apr-2016 23:42:47 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[21-Apr-2016 23:43:44 America/Denver] 
+[21-Apr-2016 23:43:44 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[21-Apr-2016 23:43:44 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[21-Apr-2016 23:43:44 America/Denver] sadf
+[21-Apr-2016 23:43:44 America/Denver] sdf
+[21-Apr-2016 23:43:44 America/Denver] San Jose
+[21-Apr-2016 23:43:44 America/Denver] San Jose
+[21-Apr-2016 23:43:44 America/Denver] San Jose,CA
+[21-Apr-2016 23:43:44 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
+[21-Apr-2016 23:48:02 America/Denver] 
+[21-Apr-2016 23:48:02 America/Denver] SELECT ID, CourseName, locationname as location, date1 as eventdate, time1 as eventtime, capacity1 as capacity
+                FROM eventstable where createdby= ''
+[21-Apr-2016 23:48:02 America/Denver] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home7/rubypals/public_html/phonegapstyle/phpcode/eventscreatedbyadmin.php on line 25
+[21-Apr-2016 23:48:02 America/Denver] sadf
+[21-Apr-2016 23:48:02 America/Denver] sdf
+[21-Apr-2016 23:48:02 America/Denver] San Jose
+[21-Apr-2016 23:48:02 America/Denver] San Jose
+[21-Apr-2016 23:48:02 America/Denver] San Jose,CA
+[21-Apr-2016 23:48:02 America/Denver] Array
+(
+    [0] => Array
+        (
+            [eventid] => 1
+            [eventname] => CMPE-235
+            [locationname] => sadf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [1] => Array
+        (
+            [eventid] => 2
+            [eventname] => CMPE-274
+            [locationname] => sdf
+            [date1] => 0000-00-00
+            [time1] => 00:00:00
+            [capacity] => 0
+        )
+
+    [2] => Array
+        (
+            [eventid] => 24
+            [eventname] => Fair
+            [locationname] => San Jose
+            [date1] => 2016-12-05
+            [time1] => 08:00:20
+            [capacity] => 100
+        )
+
+    [3] => Array
+        (
+            [eventid] => 25
+            [eventname] => Job Fair
+            [locationname] => San Jose
+            [date1] => 2016-04-12
+            [time1] => 09:00
+            [capacity] => 200
+        )
+
+    [4] => Array
+        (
+            [eventid] => 27
+            [eventname] => event1
+            [locationname] => San Jose,CA
+            [date1] => 0000-00-00
+            [time1] => 1:30am
+            [capacity] => 22
+        )
+
+)
+
