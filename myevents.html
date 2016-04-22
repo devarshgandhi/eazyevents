@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My Events</title>
+    <link rel="stylesheet" href="themes/Bootstrap.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #D3D3D3;
+    }
+
+    tr:nth-child(odd) {
+        background-color: white;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    td {
+        /*background-color: white;*/
+        color: black;
+    }
+    </style>
+    <script>
+    $(function() {
+        var name = sessionStorage.getItem("xhrfromlogin");
+        console.log("name:", name)
+        $('#fromLoginUserName').val(name);
+        $('#usernamefromlogin').append(name);
+
+
+        // $.post("http://rubypals.com/phonegapstyle/phpcode/eventsregisteredbyuser.php", {
+        //         fromLoginUserName: name
+        //     },
+        //     function(data, status) {
+        //         console.log("Data: " + data + "\nStatus: " + status);
+        //     });
+
+        var myevents = [];
+        var keyvalue = 0;
+        $.ajax({
+            type: 'post',
+            url: 'http://rubypals.com/phonegapstyle/phpcode/eventsregisteredbyuser.php',
+            data: $('#gr').serialize(),
+            success: function(data) {
+                console.log("the data is ", data);
+                myevents = data;
+
+                $.each(data, function(key, value) {
+                    //console.log(value);
+                    keyvalue = keyvalue + 1;
+                    $("#table_for_events").append("<tr><td style='width:20%;padding:10px 0px;'> "+keyvalue+"</td><td style='width:20%;padding:10px 0px;'>"+value.eventname+"</td><td style='width:20%;padding:10px 0px;'>"+value.locationname+"</td><td style='width:20%;padding:10px 0px;''>"+value.date1+"</td><td style='width:20%;padding:10px 0px;'>"+value.time1+"</td></tr>");
+                });
+                //document.getElementById('totalMarksSaveStatus').innerHTML = "Estimated Grade is :" + data.grade + "<br/><br/> Percentage :" + data.percentage;
+                //console.log(data.grade);
+            }
+        });
+
+        // $.getJSON("http://rubypals.com/phonegapstyle/phpcode/eventsregisteredbyuser.php", function(data) {
+        //     console.log("the events are", data);
+
+        // });
+
+
+
+        $('#gr').on('submit', function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'get',
+                url: 'http://rubypals.com/phonegapstyle/phpcode/eventsregisteredbyuser.php',
+                data: $('#gr').serialize(),
+                success: function(data) {
+                    console.log(data);
+                    document.getElementById('totalMarksSaveStatus').innerHTML = "Estimated Grade is :" + data.grade + "<br/><br/> Percentage :" + data.percentage;
+                    console.log(data.grade);
+                }
+            });
+
+        });
+
+    });
+
+
+
+    $(document).ready(function() {
+        $("button").click(function() {
+            print()
+        });
+    });
+    // $(document).on("pagecreate", function(event) {
+
+    //     $(".ui-btn").val("");
+
+    // });
+
+    function print() {
+        console.log("courseId=" + $('#CourseId').val() + "&&StudentId=" + $('#StudentId').val() + "&&MHomework=" + $('#MHomework').val() + "&&MLabs=" + $('#MLabs').val() + "&&MProject=" + $('#MProject').val() + "&&MPresentation=" + $('#MPresentation').val() + "&&MMidterm=" + $('#MMidterm').val() + "&&MFinal=" + $('#MFinal').val());
+    }
+    </script>
+    </script>
+</head>
+
+<body>
+    <div data-role="page" data-theme="d" style="background-color:#000;">
+        <div data-role="header" data-position="inline">
+            <h1 id="usernamefromlogin">Welcome,&nbsp;</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="user_home.html" rel="external" data-icon="home">Home</a></li>
+                    <li><a href="events.html" rel="external" data-icon="plus">Register</a></li>
+                    <li><a href="myevents.html" rel="external" data-icon="check" class="ui-btn-active">My Events</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" data-theme="a" style="background-color:#000;">
+            <div>
+                <table class="table" style="width:100%;color:white;">
+                    <thead class="thead-inverse" style="width:100%;color:white;">
+                        <tr style="width:100%;">
+                            <th align="left" style="width:20%;">#</th>
+                            <th align="left" style="width:20%;">Event Name</th>
+                            <th align="left" style="width:20%;">Location</th>
+                            <th align="left" style="width:20%;">Date</th>
+                            <th align="left" style="width:20%;">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_for_events" style="width:100%;">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <form id="gr" name="gr">
+            <input type="hidden" style="display:none" name="fromLoginUserName" id="fromLoginUserName">
+        </form>
+        <!-- <a href="grades.html" rel="external" data-role="button" data-icon="user">View Grades</a>
+                <h2  style="color:#fff;"> Estimate Grades</h2>
+                 <form name="gr" id="gr">
+                                <fieldset>
+
+         <input type="hidden" name="CourseId" type="number" style="display: none;" id="CourseId" value="1">
+      <input type="hidden" name="StudentId" type="number" style="display: none;" id="StudentId" value="1">
+
+
+                                    <div class="fieldcontain">
+                                        <label class="field-title gradeTextField" for="sHomeworkField" style="color:#fff;">Homework:<span>(required)</span>
+                                        </label>
+                                    <input type="range" name="MHomework" id="MHomework" value="60" min="0" max="100" data-highlight="true" data-mini="true"/>
+                                    </div>
+
+                                    <div class="fieldcontain">
+                                        <label class="field-title gradeTextField" for="sLabsField" style="color:#fff;">Lab:<span>(required)</span>
+                                        </label>
+                                        <input type="range" name="MLabs" id="MLabs"  value="60" min="0" max="100" data-highlight="true" data-mini="true">
+                                    </div>
+
+                                    <div class="fieldcontain">
+                                        <label class="field-title gradeTextField" for="sProjectField" style="color:#fff;">Project:<span>(required)</span>
+                                        </label>
+                                        <input type="range" name="MProject" id="MProject" value="60" min="0" max="100" data-highlight="true" data-mini="true">
+                                    </div>
+
+                                    <div class="fieldcontain">
+                                        <label class="field-title gradeTextField" for="sPresentationField" style="color:#fff;">Presentation:<span>(required)</span>
+                                        </label>
+                                        <input type="range" name="MPresentation" id="MPresentation" value="60" min="0" max="100" data-highlight="true" data-mini="true">
+                                    </div>
+
+                                    <div class="fieldcontain">
+                                        <label class="field-title gradeTextField" for="sMidtermField" style="color:#fff;">Midterm:<span>(required)</span>
+                                        </label>
+                                        <input type="range" name="MMidterm" id="MMidterm" value="60" min="0" max="100" data-highlight="true" data-mini="true">
+                                    </div>
+
+                                    <div class="fieldcontain">
+                                        <label class="field-title gradeTextField" for="sFinalField" style="color:#fff;">Final:<span>(required)</span>
+                                        </label>
+                                        <input type="range" name="MFinal" id="MFinal" value="60" min="0" max="100" data-highlight="true" data-mini="true">
+                                    </div>
+
+                                </fieldset>
+
+
+                        <fieldset class="ui-grid-A">
+                            <div class="ui-block-a"><button type="submit" data-theme="a" style="margin-left:60%;">COMPUTE GRADE</button></div>
+                        </fieldset>
+                            </form>
+<div class="clear"></div>
+                            <label id="totalMarksSaveStatus" style="font:bold  20px; color:#fff;"></label>
+                        </div>
+                <p>
+                </p>
+
+            </div> -->
+    </div>
+</body>
+
+</html>

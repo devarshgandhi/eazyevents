@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="themes/Bootstrap.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script>
+    $(document).ready(function() {
+        //console.log("the data: ", (localStorage.getItem("xhrfromlogin")));
+        //localStorage.setItem("xhrfromlogin",xhr);
+        var name = sessionStorage.getItem("xhrfromlogin");
+        $('#usernamefromlogin').append(name);
+
+         $.getJSON("http://rubypals.com/phonegapstyle/phpcode/get_course.php", function(data) {
+            var items = [];
+            events = data;
+            $.each(data, function(key, value) {
+                $("#course").append("<a href='#' onclick='setEventToRegister(value)' class='dropdown-item bg-light' id='course" + value.ID + "' value='" + value.ID + "'>" + value.CourseName + "</a><div class='dropdown-item event-details' id='courseDesc" + value.ID + "'> " + value.Description + "</div>" + "</a><div class='dropdown-item event-details' id='locationname" + value.ID + "'> " + value.locationname + "</div>" + "</a><div class='dropdown-item event-details' id='time1" + value.ID + "'> " + value.time1 + "</div>" + "</a><div class='dropdown-item event-details' id='capacity1" + value.ID + "'> " + value.capacity1 + "</div><hr>");
+            });
+            //console.log("Events: ", events);
+            //$("#course").append("<div class='dropdown-bottom-border'></div>");
+            function setEventToRegister(event){
+                console.log("event: ",event);
+            }
+
+
+            //$(".dropdown-item").hide();
+            //$(".event-details").hide();
+        });
+
+         function logout(){
+                console.log("logout is called");
+                sessionStorage.removeItem("xhrfromlogin");
+            }
+
+    });
+</script>
+</head>
+
+<body>
+    <div data-role="page" data-theme="d" style="background-color:#000;">
+        <div data-role="header" data-position="inline">
+            <h1 id="usernamefromlogin">Welcome&nbsp;</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="user_home.html" rel="external" data-icon="home" class="ui-btn-active">Home</a></li>
+                    <li><a href="events.html" rel="external" data-icon="plus">Register</a></li>
+                    <li><a href="myevents.html" rel="external" data-icon="check">My Events</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" data-theme="b" style="background-color:#000;">
+            <a href="#" rel="external" data-role="button" data-theme="a" data-icon="gear" style="color:#fff; width:30px; height:10px; margin-left:90%;" onclick="logout()"><span style="color:#000; font-size:8px;">Logout</span></a>
+            <div data-role="collapsible" data-theme="a" data-content-theme="b">
+                <h3>Upcoming Events</h3>
+                <!-- <span style="text-shadow: 10px 10px 10px red; font-size:30px; margin-left:15%;"><b>COOL PROFESSOR SINN</b></span> -->
+                <div id="course"></div>
+                <p>
+                </p>
+            </div>
+        </div>
+</body>
+
+</html>
