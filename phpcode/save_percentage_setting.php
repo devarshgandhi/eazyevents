@@ -44,7 +44,7 @@ $sql = "UPDATE registeredusers SET ".
 
 $conn = get_connection();
 
-$query = "SELECT userid FROM registered WHERE eventname = '$eventname'";
+$query = "SELECT userid FROM registered WHERE eventname = '$eventname' AND userid ='$username1'";
 $result = mysqli_query($conn, $query);
 
 	
