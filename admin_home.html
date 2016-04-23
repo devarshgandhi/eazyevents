@@ -7,11 +7,13 @@
     <title>Eazy Events</title>
     <link rel="stylesheet" href="themes/Bootstrap.css">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="scripts/jquery.timepicker.css" />
     <link rel="stylesheet" type="text/css" media="all" href="calendar-win2k-cold-1.css" title="win2k-cold-1" />
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="scripts/jquery.timepicker.js"></script>
     <script>
@@ -36,9 +38,20 @@
     body {
         font-family: 'Roboto', sans-serif;
     }
+    .btn-width{
+        width:80px !important;
+        border:none !important;
+        /*background-color:#cacbe8 !important;*/
+        /*color:black !important;*/
+    }
+    .btn-width-create{
+        width:125px !important;
+        border:none !important;
+         background-color:#3b40d9 !important;
+         /*color:black !important;*/
+    }
     </style>
     <script>
-
     $(function() {
         var name = sessionStorage.getItem("xhrfromlogin");
         console.log("name:", name)
@@ -61,18 +74,20 @@
                 error: function(xhr, status) {
                     console.log(status);
                     alert("Event Created!");
+                    $('#myModal').modal('hide');
                 },
                 success: function(data, xhr) {
-                    console.log(data.status);
+                    console.log("sucess",data);
                     alert("Event Created!");
-
+                    $('#myModal').modal('hide');
                 }
 
             });
 
         });
     });
-     function logout() {
+
+    function logout() {
         console.log("logout is called");
         sessionStorage.clear();
         window.location.href = "index.html";
@@ -94,8 +109,43 @@
         </div>
         <div data-role="content" data-theme="d" style="background-color:#000;">
             <a href="index.html" rel="external" data-role="button" data-theme="a" data-icon="gear" style="color:#fff; width:30px; height:10px; margin-left:90%;" onclick="logout()"><span style="color:#000; font-size:8px;">Logout</span></a>
-            <a href="#popupLogin" data-rel="popup" data-role="button" data-icon="check" data-theme="d" data-transition="pop">Create Event</a>
-            <div data-role="popup" id="popupMenu" data-theme="a">
+            <a href="#popupLogin" data-rel="popup" data-role="button" data-icon="check" data-toggle="modal" data-target="#myModal" data-theme="d" data-transition="pop">Create Event</a>
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Create Event</h4>
+                        </div>
+                        <form id="gr" name="gr">
+                        <div class="modal-body">
+
+                        <div style="padding:10px 20px;">
+                            <label for="un" class="ui-hidden-accessible">Event Name:</label>
+                            <input type="text" name="class" id="class" value="" placeholder="Event Name" data-theme="a">
+                            <label for="un" class="ui-hidden-accessible">Location</label>
+                            <input type="text" name="location" id="location" value="" placeholder="Location" data-theme="a">
+                            <label for="text" class="ui-hidden-accessible">Description:</label>
+                            <input type="text" name="description" id="description" value="" placeholder="Description" data-theme="a">
+                            <label for="un" class="ui-hidden-accessible">Date:</label>
+                            <input type="text" name="date" class="dp" id="date" placeholder="yyyy-dd-mm">
+                            <label for="un" class="ui-hidden-accessible">Time:</label>
+                            <input type="text" name="time" id="time" value="" placeholder="Time" data-theme="a">
+                            <label for="un" class="ui-hidden-accessible">Capacity:</label>
+                            <input type="text" name="capacity" id="capacity" value="" placeholder="Capacity" data-theme="a">
+                            <input type="hidden" name="fromLoginUserName" id="fromLoginUserName" value="" placeholder="Capacity" data-theme="a">
+                        </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" data-theme="b" data-icon="check" class="btn btn-info btn-width-create" >Add Event</button>
+                            <button type="button" class="btn btn-default btn-width" data-dismiss="modal">Close</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- <div data-role="popup" id="popupMenu" data-theme="a">
                 <div data-role="popup" id="popupLogin" data-theme="c" class="ui-corner-all">
                     <form id="gr" name="gr">
                         <div style="padding:10px 20px;">
@@ -117,7 +167,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> -->
             <a href="set1.html" rel="external" data-role="button" data-icon="user">View All</a>
             <a href="student.html" rel="external" data-role="button" data-icon="user">View Created Events</a>
             <p>
