@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Compute my grade</title>
+    <title>Eazy Events</title>
     <link rel="stylesheet" href="themes/Bootstrap.css">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
@@ -38,10 +38,15 @@
     }
     </style>
     <script>
+
     $(function() {
-          var name = localStorage.getItem("xhrfromlogin");
+        var name = sessionStorage.getItem("xhrfromlogin");
         console.log("name:", name)
         $('#fromLoginUserName').val(name);
+        if (!name) {
+            window.location.href = "index.html";
+        }
+        $('#username').append(name);
         $('#date').datepicker();
         //  $('.dp').on('change', function(){
         //     $('.datepicker').hide();
@@ -67,15 +72,18 @@
 
         });
     });
-
-
+     function logout() {
+        console.log("logout is called");
+        sessionStorage.clear();
+        window.location.href = "index.html";
+    }
     </script>
 </head>
 
 <body>
     <div data-role="page" data-theme="f" style="background-color:#000;">
         <div data-role="header" data-position="inline">
-            <h1>Eazy Events!</h1>
+            <h1 id="username">Welcome&nbsp;</h1>
             <div data-role="navbar">
                 <ul>
                     <li><a href="admin_home.html" rel="external" data-icon="home" class="ui-btn-active">Home</a></li>
@@ -85,8 +93,7 @@
             </div>
         </div>
         <div data-role="content" data-theme="d" style="background-color:#000;">
-            <a href="index.html" rel="external" data-role="button" data-theme="a" data-icon="gear" style="color:#fff; width:30px; height:10px; margin-left:90%;"><span style="color:#000; font-size:8px;">Logout</span></a>
-            <h2 style="color:#fff;">Welcome Username!</h2>
+            <a href="index.html" rel="external" data-role="button" data-theme="a" data-icon="gear" style="color:#fff; width:30px; height:10px; margin-left:90%;" onclick="logout()"><span style="color:#000; font-size:8px;">Logout</span></a>
             <a href="#popupLogin" data-rel="popup" data-role="button" data-icon="check" data-theme="d" data-transition="pop">Create Event</a>
             <div data-role="popup" id="popupMenu" data-theme="a">
                 <div data-role="popup" id="popupLogin" data-theme="c" class="ui-corner-all">
