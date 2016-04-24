@@ -48,4 +48,4 @@ CREATE TABLE `registeredevents` (
   CONSTRAINT `eventname` FOREIGN KEY (`eventname`) REFERENCES `event` (`name`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8
 
-
+INSERT INTO event (name, description, street, city, state, zipcode, date, maxcapacity, registeredusers, isfinished, organizer) VALUES ('E3', 'party', 'street', 'city', 'CA', '94015', '2038-01-19 03:14:07', 100, 20, false, "abc");
