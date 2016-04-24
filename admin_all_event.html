@@ -58,7 +58,7 @@
     }
 
     tr:nth-child(even) {
-        background-color: #D3D3D3;
+        background-color: transparent;
         height:10px;
     }
 
@@ -68,7 +68,7 @@
     }
 
     th {
-        background-color: #4CAF50;
+        background-color:#006bb3;
         color: white;
         border:2px solid black;
     }
@@ -165,9 +165,10 @@
 </head>
 
 <body>
-    <div data-role="page" data-theme="f" style="background-color:whitesmoke;">
-        <div data-role="header" data-position="inline">
-            <h1 id='username'>Welcome&nbsp;</h1>
+    <div data-role="page" data-theme="f" style="background-image:url(../images/Embossed_Paper_Logo.jpg); background-size: cover;background-repeat: no-repeat;background-position: center;"> 
+        <div data-role="header" data-position="inline"style="background-color:transparent;">
+        <div data-role="header" data-position="inline" style="background-color:transparent;">
+            <h1 id='username' style="color:black;">Welcome&nbsp;</h1>
             <div data-role="navbar">
                 <ul>
                     <li><a href="admin_home.html" rel="external" data-icon="home">Home</a></li>
@@ -177,9 +178,9 @@
             </div>
         </div>
         <a href="index.html" rel="external" data-role="button" data-theme="a" data-icon="power" style="color:#fff; width:30px; height:10px; margin-left:90%;" onclick="logout()"><span style="color:#000; font-size:8px;">Logout</span></a>
-        <div data-role="content" data-theme="a" style="background-color:whitesmoke;">
-            <div>
-                <table class="table" style="width:100%;color:white;">
+        <div data-role="content" data-theme="a" style="background-color:transparent;" >
+            <div >
+                <table class="table" style="width:100%;" >
                     <thead class="thead-inverse" style="width:100%;color:white;">
                         <tr style="width:100%;">
                             <th align="left" style="width:10%;">#</th>
@@ -191,7 +192,7 @@
                             <th align="left" style="width:10%;">Capacity</th>
                         </tr>
                     </thead>
-                    <tbody id="table_for_events" style="width:100%;">
+                    <tbody id="table_for_events" style="width:100%;" >
                     </tbody>
                 </table>
             </div>
