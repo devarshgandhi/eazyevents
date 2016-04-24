@@ -1,0 +1,7 @@
+com/eazy/events/models/Event.class
+com/eazy/events/rest/RestService$1.class
+com/eazy/events/rest/RestService$3.class
+com/eazy/events/rest/RestService.class
+com/eazy/events/db/DataBaseConnections.class
+com/eazy/events/models/User.class
+com/eazy/events/rest/RestService$2.class
