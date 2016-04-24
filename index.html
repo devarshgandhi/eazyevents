@@ -41,7 +41,7 @@
                     } else if (data.status == "Student") {
                         window.location.href = "user_home.html";
                     } else /*if(data.status=="Wrong Username or Password")*/ {
-                        $("#error_container").append("* Wrong Username or Password");
+                        $("#error_container").html("* Wrong Username or Password");
                     }
                 }
 
@@ -62,7 +62,7 @@
             <form id="gr" name="gr">
                 <div data-role="fieldcontain">
                     <label for="name">Username:</label>
-                    <input type="text" name="userid" id="userid" value="" />
+                    <input type="text" name="ID" id="ID" value="" />
                 </div>
                 <div data-role="fieldcontain">
                     <label for="name">Password:</label>

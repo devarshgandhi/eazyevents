@@ -1,109 +1,117 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>jQuery Mobile Bootstrap Theme</title>
-		<link rel="stylesheet" href="themes/Bootstrap.css">
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
-		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-		<link rel="external" data-ajax="false">
-		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
-			<script>
-		$(function () {
-        $('#gr').on('submit', function (e) {
-          e.preventDefault();
-          $.ajax({
-            type: 'post',
-            url: 'http://rubypals.com/phonegapstyle/phpcode/signup.php',
-            data: $('#gr').serialize(),
-            error: function(xhr,status){
-            console.log("status",status);
-            alert(status);
- },
-            success: function (data, xhr) {
-            console.log("data:",data," xhr: ",xhr);
-            console.log("data status:",data.status);
-            if(data.status=="True"){
-            window.location.href="index.html";
-            }
-            if(data.status=="True"){
-            window.location.href="index.html";
-            }
-            if(data.status=="Error")
-                console.log("status",data.status);
-                if(data.email != null || data.email != undefined )
-                	$('#error_container').append("* ",data.email);
-                if(data.userid != null || data.userid != undefined )
-                    $('#error_container').append("* ",data.userid);
-	}
 
-          });
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>jQuery Mobile Bootstrap Theme</title>
+    <link rel="stylesheet" href="themes/Bootstrap.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <link rel="external" data-ajax="false">
+    <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    <script>
+    $(function() {
+        $('#gr').on('submit', function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'post',
+                url: 'http://rubypals.com/phonegapstyle/phpcode/signup.php',
+                data: $('#gr').serialize(),
+                error: function(xhr, status) {
+                    console.log("status", status);
+                    alert(status);
+                },
+                success: function(data, xhr) {
+                    console.log("data:", data, " xhr: ", xhr);
+                    console.log("data status:", data.status);
+                    if (data.status == "True") {
+                        window.location.href = "index.html";
+                    }
+                    if (data.status == "True") {
+                        window.location.href = "index.html";
+                    }
+                    if (data.status == "Error")
+                        console.log("status", data.status);
+                    if (data.email != null || data.email != undefined)
+                        $('#error_container').append("* ", data.email);
+                    if (data.userid != null || data.userid != undefined)
+                        $('#error_container').append("* ", data.userid);
+                }
+
 
         });
 
-      });
-		</script>
+    });
+    })
+    </script>
+</head>
 
-	</head>
-	<body>
-		<div data-role="page" data-theme="a">
-        <div ><img style="width:100%;height:117px;" src="images/EazyEvents_Green.jpg"></div>
-            <a href="index.html" rel="external" data-role="button" data-icon="user">Login</a>
-            <h2>Login- Eazy Events</h2>
-			<div data-role="content" data-theme="a">
+<body>
+    <div data-role="page" data-theme="a">
+        <div><img style="width:100%;height:117px;" src="images/EazyEvents_Green.jpg"></div>
+        <a href="index.html" rel="external" data-role="button" data-icon="user">Login</a>
+        <div data-role="content" data-theme="a">
+            <h2>Sign Up</h2>
+            <form id="gr" name="gr">
+                <div data-role="fieldcontain">
+                    <label for="name">Username:</label>
+                    <input type="text" name="ID" id="ID" value="" required="true" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="name">Password:</label>
+                    <input type="password" name="password" id="password" value="" required="true" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="name">Re-Password:</label>
+                    <input type="password" name="repassword" id="repassword" value="" required="true" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name2" id="name2" value="" required="true" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="name">Street:</label>
+                    <input type="text" name="street" id="street" value="" required="true" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="name">City:</label>
+                    <input type="text" name="city" id="city" value="" required="true" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="name">State:</label>
+                    <input type="text" name="state" id="state" value="" required="true" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="name">Zipcode:</label>
+                    <input type="email" name="zipcode" id="zipcode" value="" required="true" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="name">Phone:</label>
+                    <input type="text" name="phone" id="phone" value="" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="slider2" style="width:200px;">Account Type:</label>
+                    <select name="Type" id="Type" data-role="slider" name="acc" style="width:100px;">
+                        <option value="Student">User </option>
+                        <option value="Prof">Admin </option>
+                    </select>
+                </div>
+                <div id="error_container" style="color:red;display: block"></div>
+                <div class="ui-body ui-body-b">
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <button type="reset" data-theme="e">Cancel</button>
+                        </div>
+                        <div class="ui-block-b">
+                            <button type="submit" name="submit" value="submit" data-theme="f">Signup</button>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
 
-				<h2>Sign Up</h2>
-
-				<form id="gr" name="gr">
-
-					<div data-role="fieldcontain">
-						<label for="name">Username:</label>
-						<input type="text" name="ID" id="ID" value="" required="true" />
-					</div>
-					<div data-role="fieldcontain">
-						<label for="name">Password:</label>
-						<input type="password" name="password" id="password" value=""  required="true" />
-					</div>
-					<div data-role="fieldcontain">
-						<label for="name">Re-Password:</label>
-						<input type="password" name="repassword" id="repassword" value="" required="true" />
-					</div>
-
-                     <div data-role="fieldcontain">
-						<label for="name">Name:</label>
-						<input type="text" name="name2" id="name2" value="" required="true" />
-					</div>
-
-					<div data-role="fieldcontain">
-						<label for="name">Email:</label>
-						<input type="email" name="email" id="email" value="" required="true" />
-					</div>
-
-					<div data-role="fieldcontain">
-						<label for="name">Phone:</label>
-						<input type="text" name="phone" id="phone" value=""  />
-					</div>
-
-
-					<div data-role="fieldcontain">
-						<label for="slider2" style="width:200px;">Account Type:</label>
-						<select name="Type" id="Type" data-role="slider" name="acc" style="width:100px;">
-							<option value="Student">User  </option>
-							<option value="Prof">Admin  </option>
-						</select>
-					</div>
-                                                                <div id="error_container" style="color:red;display: block"></div>
-					<div class="ui-body ui-body-b">
-						<fieldset class="ui-grid-a">
-							<div class="ui-block-a"><button type="reset" data-theme="e">Cancel</button></div>
-							<div class="ui-block-b"><button type="submit" name="submit" value="submit" data-theme="f">Signup</button></div>
-					    </fieldset>
-					</div>
-				</form>
-
-			</div>
-		</div>
-	</body>
 </html>
