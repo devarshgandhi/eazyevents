@@ -23,26 +23,27 @@
             e.preventDefault();
             $.ajax({
                 type: 'post',
-                url: 'http://rubypals.com/phonegapstyle/phpcode/login.php',
+                url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/login',
                 data: $('#gr').serialize(),
                 error: function(xhr, status) {
-                    console.log(xhr);
+                    debugger;
+                    if(xhr.status == "404")
+                        alert("UserName or Password is wrong");
+                     if (xhr.status == "500") {
+                         alert("Internal Server Error Please try Again...");
+                    }
                 },
                 success: function(data, xhr) {
-                    name = $("#ID").val();
-                    console.log("Username: ", name);
-                    console.log(data);
-                    console.log("xhr", xhr);
-                    console.log("localStorage: ", window.localStorage);
-                    sessionStorage.setItem("xhrfromlogin", name);
-                    sessionStorage.setItem("data", data);
-                    if (data.status == "Prof") {
+                    debugger;
+                    setTimeout(function(){
+                        sessionStorage.setItem("userObject",JSON.stringify(data));
+                         if (data.type == "admin")
                         window.location.href = "admin_home.html";
-                    } else if (data.status == "Student") {
+                        else if (data.type == "user")
                         window.location.href = "user_home.html";
-                    } else /*if(data.status=="Wrong Username or Password")*/ {
-                        $("#error_container").html("* Wrong Username or Password");
-                    }
+                },0);
+
+
                 }
 
             });
@@ -62,7 +63,7 @@
             <form id="gr" name="gr">
                 <div data-role="fieldcontain">
                     <label for="name">Username:</label>
-                    <input type="text" name="ID" id="ID" value="" />
+                    <input type="text" name="userid" id="userid" value="" />
                 </div>
                 <div data-role="fieldcontain">
                     <label for="name">Password:</label>

@@ -75,23 +75,28 @@
     //         });
 
 
-        var name = sessionStorage.getItem("xhrfromlogin");
-        console.log("name:",name);
-        $('#fromLoginUName').append(name);
-        if(!name){
+       var userobj = $.parseJSON(sessionStorage.getItem("userObject"));
+        if(!userobj){
             window.location.href = "index.html";
         }
+        console.log(userobj);
+        $('#fromLoginUnName').append(userobj.firstName);
 
     // event details from the backend -- Needed
     var events = [];
     $(document).on("pagebeforecreate", function() {
 
         //$.getJSON("http://rubypals.com/cmpe235/phpcode/get_course.php", function(data) {
-        $.getJSON("http://rubypals.com/phonegapstyle/phpcode/get_course.php", function(data) {
+        $.getJSON("http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/getallevents", function(data) {
             var items = [];
-            events = data;
-            $.each(data, function(key, value) {
-                $("#course").append("<a href='#' onclick='setCourseDetail(this)' class='dropdown-item bg-light' id='course" + value.ID + "' value='" + value.ID + "'>" + value.CourseName + "</a><div class='dropdown-item event-details' id='courseDesc" + value.ID + "'> " + value.Description + "</div>" + "</a><div class='dropdown-item event-details' id='locationname" + value.ID + "'> " + value.locationname + "</div>" + "</a><div class='dropdown-item event-details' id='time1" + value.ID + "'> " + value.time1 + "</div>" + "</a><div class='dropdown-item event-details' id='capacity1" + value.ID + "'> " + value.capacity1 + "</div>");
+            events = data.event;
+            $.each(events, function(key, value) {
+                var date,time,temp;
+                temp = new Date(value.date);
+                 date=temp.toLocaleDateString();
+                time = temp.toLocaleTimeString();
+
+                $("#course").append("<a href='#' onclick='setCourseDetail(this)' class='dropdown-item bg-light' id='course" + value.eventid + "' value='" + value.eventid + "'>" + value.name + "</a><div class='dropdown-item event-details' id='courseDesc" + value.eventid + "'> " + value.description + "</div>" + "<div class='dropdown-item event-details' id='locationname" + value.eventid + "'> " + value.street + " , "+value.city+" , " + value.state + " , "+value.zipcode+"</div>" + "<div class='dropdown-item event-details' id='time1" + value.eventid + "'> " + date + "</div><div class='dropdown-item event-details' id='time1" + value.eventid + "'> " + time + "</div><div class='dropdown-item event-details' id='capacity1" + value.eventid + "'> " + value.maxcapacity + "</div>");
             });
             console.log("Events: ", events);
             $("#course").append("<div class='dropdown-bottom-border'></div>");
@@ -102,37 +107,40 @@
 
     });
 
-    function getEventName(eventid) {
-        console.log("the event id is", eventid);
+    function getEventName(eventId) {
+
+        console.log("the event id is", eventId);
+        console.log(events)
         for (var i = 0; i < events.length; i++) {
-            if (eventid == events[i].ID) {
-                $('#fromEventName').val(events[i].CourseName);
+            if (eventId == events[i].eventid) {
+                $('#eventname').val(events[i].name);
             }
         }
     };
 
     function setCourseDetail(event) {
-
+        console.log("event is",event);
         $(event).parent().find('.dropdown-item').hide();
         $(event).parent().find('.dropdown-hidden').hide();
 
         //$(event).parent().find('.dropdown-deploy').text(event.innerText);
         $(event).parent().find('.dropdown-deploy').show();
 
-        var courseId = event.attributes.value.value;
-        console.log("eventname: ", event.attributes);
-        $('#courseDesc' + '#locationname' + courseId).show();
-        $('#course' + courseId).show();
-        $('#courseDesc' + courseId).show();
-        $('#locationname' + courseId).show();
-        $('#time1' + courseId).show();
-        $('#capacity1' + courseId).show();
-        $('#CourseId').val(courseId);
+        var eventid = event.attributes.value.value;
+        console.log("eventname: ", eventid);
+        $('#courseDesc' + '#locationname' + eventid).show();
+        $('#course' + eventid).show();
+        $('#courseDesc' + eventid).show();
+        $('#locationname' + eventid).show();
+        $('#time1' + eventid).show();
+        $('#capacity1' + eventid).show();
+        debugger;
+         $('#eventid').val(eventid);
         console.log("local: ", localStorage.getItem("xhrfromlogin"));
-        $("#ScalingFactorCourseId").val(courseId);
+        $("#ScalingFactorCourseId").val(eventid);
         console.log("in nAME : ",name);
-        $('#fromLoginUserName').val(name);
-        getEventName(courseId);
+        $('#userid').val(userobj.userId);
+        getEventName(eventid);
 
     };
     $(function() {
@@ -140,24 +148,22 @@
             e.preventDefault();
             $.ajax({
                 type: 'post',
-                url: 'http://rubypals.com/phonegapstyle/phpcode/save_percentage_setting.php',
+                url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/registerevent',
                 data: $('#gr').serialize(),
                 error: function(xhr, status) {
                     console.log(status);
-                    document.getElementById('totalMarksSaveStatus').innerHTML = "Scaling Factors cannot be saved. It has to total to 100%";
-
-                    if (xhr.status == 200) {
-                        document.getElementById('totalMarksSaveStatus').innerHTML = "Scaling Factors saved successfully";
-
+                    if(xhr.status == "304")
+                        alert("Error occurred Please try again..");
+                     if (xhr.status == "500") {
+                         alert("Internal Server Error Please try Again...");
+                    }
+                     if (xhr.status == "409") {
+                         alert("You are already registered for these event");
                     }
                 },
-                success: function(data, xhr) {
-                    console.log("success:",data.status);
-                    if(data.status=="True")
-                        alert(data.message);
-                    if(data.status=="False")
-                        alert(data.message);
-                    document.getElementById('totalMarksSaveStatus').innerHTML = "Scaling Factors saved successfully";
+                success: function(data, status,xhr) {
+
+                   alert("Register Successfully");
                 }
 
             });
@@ -177,7 +183,7 @@
     <body>
         <div data-role="page" data-theme="d" style="background-color:#000;">
             <div data-role="header" data-position="inline">
-                <h1 id="fromLoginUName">Welcome,&nbsp;</h1>
+                <h1 id="fromLoginUnName">Welcome,&nbsp;</h1>
                 <div data-role="navbar">
                     <ul>
                         <li><a href="user_home.html" rel="external" data-icon="home">Home</a></li>
@@ -200,9 +206,9 @@
                     <div class="toggle-decoration-v4"></div>
                     <form id="gr" name="gr">
                         <fieldset>
-                            <input type="hidden" name="courseId" type="number" style="display: none;" id="CourseId">
-                            <input type="hidden" style="display:none" name="fromLoginUserName" id="fromLoginUserName">
-                            <input type="hidden" style="display:none" name="fromEventName" id="fromEventName">
+                            <input type="hidden" name="eventid" type="number" style="display: none;" id="eventid">
+                            <input type="hidden" style="display:none" name="userid" id="userid">
+                            <input type="hidden" style="display:none" name="eventname" id="eventname">
                         </fieldset>
                         <fieldset class="ui-grid-a">
                             <div class="ui-block-a">

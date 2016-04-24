@@ -43,12 +43,17 @@
     </style>
     <script>
     $(function() {
-        var name = sessionStorage.getItem("xhrfromlogin");
-        console.log("name:", name)
-        $('#fromLoginUserName').val(name);
-        $('#usernamefromlogin').append(name);
 
-         if(!name){
+        var userobj = $.parseJSON(sessionStorage.getItem("userObject"));
+        if(!userobj){
+            window.location.href = "index.html";
+        }
+        console.log(userobj);
+        //$('#fromLoginUName').append(userobj.firstname);
+        $('#userid').val(userobj.userId);
+        $('#usernamefromlogin').append(userobj.firstName);
+        debugger;
+        if (!name) {
             window.location.href = "index.html";
         }
         // $.post("http://rubypals.com/phonegapstyle/phpcode/eventsregisteredbyuser.php", {
@@ -62,7 +67,7 @@
         var keyvalue = 0;
         $.ajax({
             type: 'post',
-            url: 'http://rubypals.com/phonegapstyle/phpcode/eventsregisteredbyuser.php',
+            url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/getregisteredeventsforuser',
             data: $('#gr').serialize(),
             success: function(data) {
                 console.log("the data is ", data);
@@ -70,8 +75,12 @@
 
                 $.each(data, function(key, value) {
                     //console.log(value);
+                     var date,time,temp;
+                temp = new Date(value.date);
+                 date=temp.toLocaleDateString();
+                time = temp.toLocaleTimeString();
                     keyvalue = keyvalue + 1;
-                    $("#table_for_events").append("<tr><td style='width:20%;padding:10px 0px;'> "+keyvalue+"</td><td style='width:20%;padding:10px 0px;'>"+value.eventname+"</td><td style='width:20%;padding:10px 0px;'>"+value.locationname+"</td><td style='width:20%;padding:10px 0px;''>"+value.date1+"</td><td style='width:20%;padding:10px 0px;'>"+value.time1+"</td></tr>");
+                    $("#table_for_events").append("<tr><td style='width:20%;padding:10px 0px;'> " + keyvalue + "</td><td style='width:20%;padding:10px 0px;'>" + value.name+ "</td><td style='width:20%;padding:10px 0px;'>" + value.street + " , "+value.city+" , " + value.state + " , "+value.zipcode+"</div>"  + "</td><td style='width:20%;padding:10px 0px;''>" + date + "</td><td style='width:20%;padding:10px 0px;'>" + time + "</td></tr>");
                 });
                 //document.getElementById('totalMarksSaveStatus').innerHTML = "Estimated Grade is :" + data.grade + "<br/><br/> Percentage :" + data.percentage;
                 //console.log(data.grade);
@@ -102,11 +111,11 @@
 
     });
 
-     function logout(){
-                console.log("logout is called");
-                sessionStorage.clear();
-                window.location.href = "index.html";
-            }
+    function logout() {
+        console.log("logout is called");
+        sessionStorage.clear();
+        window.location.href = "index.html";
+    }
 
     $(document).ready(function() {
         $("button").click(function() {
@@ -140,7 +149,6 @@
         </div>
         <a href="index.html" rel="external" data-role="button" data-theme="a" data-icon="gear" style="color:#fff; width:30px; height:10px; margin-left:90%;line-height: 0px !important;font-size: 23px;" onclick="logout()"><span style="color:#000; font-size:8px;margin-left:-20px;">Logout</span></a>
         <div data-role="content" data-theme="a" style="background-color:#000;">
-
             <div>
                 <table class="table" style="width:100%;color:white;">
                     <thead class="thead-inverse" style="width:100%;color:white;">
@@ -158,7 +166,7 @@
             </div>
         </div>
         <form id="gr" name="gr">
-            <input type="hidden" style="display:none" name="fromLoginUserName" id="fromLoginUserName">
+            <input type="hidden" style="display:none" name="userid" id="userid">
         </form>
         <!-- <a href="grades.html" rel="external" data-role="button" data-icon="user">View Grades</a>
                 <h2  style="color:#fff;"> Estimate Grades</h2>

@@ -15,17 +15,26 @@
     $(document).ready(function() {
         //console.log("the data: ", (localStorage.getItem("xhrfromlogin")));
         //localStorage.setItem("xhrfromlogin",xhr);
-        var name = sessionStorage.getItem("xhrfromlogin");
-        if(!name){
+        var userobj = $.parseJSON(sessionStorage.getItem("userObject"));
+        if(!userobj){
             window.location.href = "index.html";
         }
-        $('#usernamefromlogin').append(name);
+        console.log(userobj);
+        $('#usernamefromlogin').append(userobj.firstName);
 
-         $.getJSON("http://rubypals.com/phonegapstyle/phpcode/get_course.php", function(data) {
+         $.getJSON("http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/getallevents", function(data) {
             var items = [];
-            events = data;
-            $.each(data, function(key, value) {
-                $("#course").append("<a href='#' onclick='setEventToRegister(value)' class='dropdown-item bg-light' id='course" + value.ID + "' value='" + value.ID + "'>" + value.CourseName + "</a><div class='dropdown-item event-details' id='courseDesc" + value.ID + "'> " + value.Description + "</div>" + "</a><div class='dropdown-item event-details' id='locationname" + value.ID + "'> " + value.locationname + "</div>" + "</a><div class='dropdown-item event-details' id='time1" + value.ID + "'> " + value.time1 + "</div>" + "</a><div class='dropdown-item event-details' id='capacity1" + value.ID + "'> " + value.capacity1 + "</div><hr>");
+
+            events = data.event;
+            console.log("event",events);
+            $.each(events, function(key, value) {
+            var date,time,temp;
+                temp = new Date(value.date);
+                date=temp.toLocaleDateString();
+                time = temp.toLocaleTimeString();
+                debugger;
+
+                $("#course").append("<a href='#' onclick='setEventToRegister(value)' class='dropdown-item bg-light' id='course" + value.eventId + "' value='" + value.eventId + "'>" + value.name + "</a><div class='dropdown-item event-details' id='courseDesc" + value.eventId + "'> " + value.description + "</div>" + "</a><div class='dropdown-item event-details' id='locationname" + value.eventId + "'> " + value.street + " , "+value.city+" , " + value.state + " , "+value.zipcode+"</div>" + "<div class='dropdown-item event-details' id='time1" + value.eventId + "'> " + date + "</div><div class='dropdown-item event-details' id='time1" + value.eventId + "'> " + time + "</div>" + "<div class='dropdown-item event-details' id='capacity1" + value.eventId + "'> " + value.maxcapacity + "</div><hr>");
             });
             //console.log("Events: ", events);
             //$("#course").append("<div class='dropdown-bottom-border'></div>");

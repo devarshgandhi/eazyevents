@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="themes/Bootstrap.css">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--Declare page as mobile friendly -->
@@ -33,19 +33,7 @@
     <link href="styles/swipebox.css" rel="stylesheet" type="text/css">
     <link href="styles/icons.css" rel="stylesheet" type="text/css">
     <link href="styles/retina.css" rel="stylesheet" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" /> -->
-    <script src="scripts/jquery.min.js" type="text/javascript"></script>
-    <script src="scripts/snap.js" type="text/javascript"></script>
-    <script src="scripts/hammer.js" type="text/javascript"></script>
-    <script src="scripts/jquery-ui-min.js" type="text/javascript"></script>
-    <script src="scripts/subscribe.js" type="text/javascript"></script>
-    <script src="scripts/contact.js" type="text/javascript"></script>
-    <script src="scripts/jquery.swipebox.js" type="text/javascript"></script>
-    <script src="scripts/bxslider.js" type="text/javascript"></script>
-    <script src="scripts/colorbox.js" type="text/javascript"></script>
-    <script src="scripts/retina.js" type="text/javascript"></script>
-    <script src="scripts/custom.js" type="text/javascript"></script>
-    <script src="scripts/framework.js" type="text/javascript"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -80,8 +68,6 @@
     }
     </style>
     <script>
-
-
     $(document).on("pagebeforecreate", function() {
 
 
@@ -121,7 +107,7 @@
                 $.each(data, function(key, value) {
                     //console.log(value);
                     keyvalue = keyvalue + 1;
-                    $("#table_for_events").append("<tr><td style='width:20%;padding:10px 0px;'> " + keyvalue + "</td><td style='width:20%;padding:10px 0px;'>" + value.eventname + "</td><td style='width:20%;padding:10px 0px;'>" + value.locationname + "</td><td style='width:20%;padding:10px 0px;''>" + value.date1 + "</td><td style='width:10%;padding:10px 0px;'>" + value.time1 + "</td><td style='width:5%;padding:10px 0px;'> <a href='#' onclick='edit("+value+")'><span class='glyphicon glyphicon-edit'></span></a></td><td style='width:5%;padding:10px 0px;'> <a href='#' onclick='delete("+value+")'><span class='glyphicon glyphicon-trash'></span></a></td></tr>");
+                    $("#table_for_events").append("<tr><td style='width:20%;padding:10px 0px;'> " + keyvalue + "</td><td style='width:20%;padding:10px 0px;'><a href='#' data-toggle='modal' class='openmodal' href='#addBookDialog'>" + value.eventname + "</a></td><td style='width:20%;padding:10px 0px;'>" + value.locationname + "</td><td style='width:20%;padding:10px 0px;''>" + value.date1 + "</td><td style='width:10%;padding:10px 0px;'>" + value.time1 + "</td><td style='width:5%;padding:10px 0px;'> <a href='#' onclick='edit(" + value + ")'><span class='glyphicon glyphicon-edit'></span></a></td><td style='width:5%;padding:10px 0px;'> <a href='#' onclick='delete(" + value + ")'><span class='glyphicon glyphicon-trash'></span></a></td></tr>");
                 });
             }
         });
@@ -223,6 +209,12 @@
     //     $(".ui-btn").val("");
 
     // });
+    $(document).on("click", ".openmodal", function(a, b) {
+        //debugger;
+        $('#modalid').modal('show');
+        //var myBookId = $(this).data('id');
+        //$(".modal-body").html("hello how r u");
+    });
 
     function print() {
         console.log("courseId=" + $('#CourseId').val() + "&&StudentId=" + $('#StudentId').val() + "&&MHomework=" + $('#MHomework').val() + "&&MLabs=" + $('#MLabs').val() + "&&MProject=" + $('#MProject').val() + "&&MPresentation=" + $('#MPresentation').val() + "&&MMidterm=" + $('#MMidterm').val() + "&&MFinal=" + $('#MFinal').val());
@@ -240,6 +232,19 @@
                     <li><a href="admin_all_event.html" rel="external" data-icon="grid">All Event</a></li>
                     <li><a href="admin_my_event.html" rel="external" class="ui-btn-active" data-icon="check">My Events</a></li>
                 </ul>
+            </div>
+        </div>
+        <div class="modal fade" id="modalid">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button typr="button" class="btn btn-default" data-dismiss="modal">×</button>
+                        <h3>Modal header</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>some content</p>
+                    </div>
+                </div>
             </div>
         </div>
         <a href="index.html" rel="external" data-role="button" data-theme="a" data-icon="power" style="color:#fff; width:30px; height:10px; margin-left:90%;line-height: 0px !important;font-size: 23px;" onclick="logout()"><span style="color:#000; font-size:8px;margin-left:-20px;">Logout</span></a>

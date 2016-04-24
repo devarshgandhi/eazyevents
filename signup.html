@@ -17,27 +17,25 @@
             e.preventDefault();
             $.ajax({
                 type: 'post',
-                url: 'http://rubypals.com/phonegapstyle/phpcode/signup.php',
+                url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/signup',
                 data: $('#gr').serialize(),
-                error: function(xhr, status) {
-                    console.log("status", status);
-                    alert(status);
-                },
-                success: function(data, xhr) {
-                    console.log("data:", data, " xhr: ", xhr);
-                    console.log("data status:", data.status);
-                    if (data.status == "True") {
+                crossDomain:true,
+                dataType:"json",
+                success: function(data, status,xhr) {
+                    console.log("data:", data);
+                    console.log("data status:", data,status,xhr);
+                    if (status == "success") {
                         window.location.href = "index.html";
                     }
-                    if (data.status == "True") {
-                        window.location.href = "index.html";
+                },error: function(xhr, status) {
+                    debugger;
+                    console.log("status", status,"   ",xhr);
+                     if (xhr.status == "409") {
+                         alert("User Name already exists");
                     }
-                    if (data.status == "Error")
-                        console.log("status", data.status);
-                    if (data.email != null || data.email != undefined)
-                        $('#error_container').append("* ", data.email);
-                    if (data.userid != null || data.userid != undefined)
-                        $('#error_container').append("* ", data.userid);
+                    if (xhr.status == "500") {
+                         alert("Internal Server Error Please try Again...");
+                    }
                 }
 
 
@@ -57,19 +55,27 @@
             <form id="gr" name="gr">
                 <div data-role="fieldcontain">
                     <label for="name">Username:</label>
-                    <input type="text" name="ID" id="ID" value="" required="true" />
+                    <input type="text" name="userid" id="userid" value="" required="true" />
                 </div>
                 <div data-role="fieldcontain">
                     <label for="name">Password:</label>
                     <input type="password" name="password" id="password" value="" required="true" />
                 </div>
                 <div data-role="fieldcontain">
-                    <label for="name">Re-Password:</label>
+                    <label for="password">Re-Password:</label>
                     <input type="password" name="repassword" id="repassword" value="" required="true" />
                 </div>
                 <div data-role="fieldcontain">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name2" id="name2" value="" required="true" />
+                    <label for="firstname">First Name:</label>
+                    <input type="text" name="firstname" id="firstname" value="" required="true" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" name="lastname" id="lastname" value="" required="true" />
+                </div>
+                 <div data-role="fieldcontain">
+                    <label for="name">Email:</label>
+                    <input type="email" name="email" id="email" value="" required="true" />
                 </div>
                 <div data-role="fieldcontain">
                     <label for="name">Street:</label>
@@ -85,17 +91,17 @@
                 </div>
                 <div data-role="fieldcontain">
                     <label for="name">Zipcode:</label>
-                    <input type="email" name="zipcode" id="zipcode" value="" required="true" />
+                    <input type="integer" name="zipcode" id="zipcode" value="" required="true" />
                 </div>
                 <div data-role="fieldcontain">
                     <label for="name">Phone:</label>
-                    <input type="text" name="phone" id="phone" value="" />
+                    <input type="phone" name="phone" id="phone" value="" />
                 </div>
                 <div data-role="fieldcontain">
                     <label for="slider2" style="width:200px;">Account Type:</label>
-                    <select name="Type" id="Type" data-role="slider" name="acc" style="width:100px;">
-                        <option value="Student">User </option>
-                        <option value="Prof">Admin </option>
+                    <select name="type" id="type" data-role="slider" name="acc" style="width:100px;">
+                        <option value="user">User </option>
+                        <option value="admin">Admin </option>
                     </select>
                 </div>
                 <div id="error_container" style="color:red;display: block"></div>
