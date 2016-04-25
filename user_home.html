@@ -24,8 +24,8 @@
 
          $.getJSON("http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/getallevents", function(data) {
             var items = [];
-
-            events = data.event;
+            debugger;
+            events = data;
             console.log("event",events);
             $.each(events, function(key, value) {
             var date,time,temp;
@@ -33,7 +33,6 @@
                 date=temp.toLocaleDateString();
                 time = temp.toLocaleTimeString();
                 debugger;
-
                 $("#course").append("<a href='#' onclick='setEventToRegister(value)' class='dropdown-item bg-light' id='course" + value.eventId + "' value='" + value.eventId + "'>" + value.name + "</a><div class='dropdown-item event-details' id='courseDesc" + value.eventId + "'> " + value.description + "</div>" + "</a><div class='dropdown-item event-details' id='locationname" + value.eventId + "'> " + value.street + " , "+value.city+" , " + value.state + " , "+value.zipcode+"</div>" + "<div class='dropdown-item event-details' id='time1" + value.eventId + "'> " + date + "</div><div class='dropdown-item event-details' id='time1" + value.eventId + "'> " + time + "</div>" + "<div class='dropdown-item event-details' id='capacity1" + value.eventId + "'> " + value.maxcapacity + "</div><hr>");
             });
             //console.log("Events: ", events);

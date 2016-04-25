@@ -80,16 +80,16 @@
             window.location.href = "index.html";
         }
         console.log(userobj);
-        $('#fromLoginUnName').append(userobj.firstName);
+
 
     // event details from the backend -- Needed
     var events = [];
     $(document).on("pagebeforecreate", function() {
-
+        $('#fromLoginUnName').append(userobj.firstName);
         //$.getJSON("http://rubypals.com/cmpe235/phpcode/get_course.php", function(data) {
         $.getJSON("http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/getallevents", function(data) {
             var items = [];
-            events = data.event;
+            events = data;
             $.each(events, function(key, value) {
                 var date,time,temp;
                 temp = new Date(value.date);

@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="scripts/jquery.timepicker.css" />
+    <script src="scripts/jquery.timepicker.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--Declare page as mobile friendly -->
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
@@ -33,182 +36,107 @@
     <link href="styles/swipebox.css" rel="stylesheet" type="text/css">
     <link href="styles/icons.css" rel="stylesheet" type="text/css">
     <link href="styles/retina.css" rel="stylesheet" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" /> -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <style>
-    table {
+    .ttable {
         border-collapse: collapse;
         width: 100%;
     }
 
-    th,
-    td {
+    .tth,
+    .ttd {
         text-align: left;
         padding: 8px;
     }
 
-    tr:nth-child(even) {
+    .ttr:nth-child(even) {
         background-color: #D3D3D3;
     }
 
-    tr:nth-child(odd) {
+    .ttr:nth-child(odd) {
         background-color: white;
     }
 
-    th {
-        background-color:#006bb3;
+    .tth {
+        background-color: #006bb3;
         color: white;
     }
 
-    td {
+    .ttd {
         /*background-color: white;*/
         color: black;
+    }
+
+    .btn-width {
+        width: 80px !important;
+        border: none !important;
+        /*background-color:#cacbe8 !important;*/
+        /*color:black !important;*/
+    }
+
+    .btn-width-create {
+        width: 125px !important;
+        border: none !important;
+        background-color: #3b40d9 !important;
+        /*color:black !important;*/
     }
     </style>
     <script>
     $(document).on("pagebeforecreate", function() {
-
-
-
-
-        // $.getJSON("http://rubypals.com/cmpe235/phpcode/get_course.php", function(data) {
-        //     var items = [];
-
-        //     $.each(data, function(key, value) {
-        //         $("#course").append("<a href='#' onclick='loadStudents(this)' class='dropdown-item bg-light' id='course" + value.ID + "' value='" + value.ID + "'>" + value.CourseName + "</a> ");
-
-        //     });
-
-        //     $("#course").append("<div class='dropdown-bottom-border'></div>");
-
-        //     $(".dropdown-item").hide();
-        // });
-
+        $('#date').datepicker();
+        $('#time').timepicker();
     });
-    $(function() {
-        var name = sessionStorage.getItem("xhrfromlogin");
-        console.log("name:", name)
-        $('#fromLoginUserName').val(name);
-        if (!name) {
-            window.location.href = "index.html";
-        }
-        $('#username').append(name);
-        var keyvalue = 0;
-        $.ajax({
-            type: 'post',
-            url: 'http://rubypals.com/phonegapstyle/phpcode/eventscreatedbyadmin.php',
-            data: $('#gr').serialize(),
-            success: function(data) {
-                console.log("the data is ", data);
-                myevents = data;
 
-                $.each(data, function(key, value) {
-                    //console.log(value);
-                    keyvalue = keyvalue + 1;
-                    $("#table_for_events").append("<tr><td style='width:20%;padding:10px 0px;'> " + keyvalue + "</td><td style='width:20%;padding:10px 0px;'><a href='#' data-toggle='modal' class='openmodal' href='#addBookDialog'>" + value.eventname + "</a></td><td style='width:20%;padding:10px 0px;'>" + value.locationname + "</td><td style='width:20%;padding:10px 0px;''>" + value.date1 + "</td><td style='width:10%;padding:10px 0px;'>" + value.time1 + "</td><td style='width:5%;padding:10px 0px;'> <a href='#' onclick='edit(" + value + ")'><span class='glyphicon glyphicon-edit'></span></a></td><td style='width:5%;padding:10px 0px;'> <a href='#' onclick='delete(" + value + ")'><span class='glyphicon glyphicon-trash'></span></a></td></tr>");
-                });
+   $(function(){
+      var userobj = $.parseJSON(sessionStorage.getItem("userObject"));
+        console.log(userobj);
+        console.log("ddd        ",userobj.userId)
+        var uid = userobj.userId;
+        debugger;
+        $('.uidobj').val(userobj.userId);
+        //$('#formLoginUserName').value("a1");
+        $('#username').append(userobj.firstName);
+
+    var events;
+    var keyvalue = 0;
+    $.ajax({
+        type: 'post',
+        url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/geteventscreatedbyuser',
+        data: $('#forinput').serialize(),
+        success: function(data) {
+            console.log("the data is ", data);
+            events = data;
+
+
+            $.each(events, function(key, value) {
+                debugger;
+                 var date,time,temp;
+                temp = new Date(value.date);
+                 date=temp.toLocaleDateString();
+                time = temp.toLocaleTimeString();
+                //console.log(value);
+                keyvalue = keyvalue + 1;
+                $("#table_for_events").append("<tr class='ttr'><td class='ttd' style='width:20%;padding:10px 0px;'> " + keyvalue + "</td><td class='ttd' style='width:20%;padding:10px 0px;'><a href='#' class='ttd' data-toggle='modal' class='openmodal' href='#addBookDialog'>" + value.name + "</a></td><td class='ttd' style='width:20%;padding:10px 0px;'>" + value.street + " , "+value.city+" , " + value.state + " , "+value.zipcode+"</td><td class='ttd' style='width:20%;padding:10px 0px;''>" + date + "</td><td class='ttd' style='width:10%;padding:10px 0px;'>" + time + "</td><td class='ttd' style='width:5%;padding:10px 0px;'> <a href='#' data-toggle='modal' class='editmodal' valid=" + value.eventid + " onclick='edit(this)'><span class='glyphicon glyphicon-edit'></span></a></td><td class='ttd' style='width:5%;padding:10px 0px;'> <a href='#' onclick='deleteevent(this)' valid=" + value.eventid + " ><span class='glyphicon glyphicon-trash'></span></a></td></tr>");
+            })
+        },
+        error:function(xhr,status){
+                debugger;
             }
-        });
     });
+});
 
-    function loadStudents(event) {
-
-
-        $(event).parent().find('.dropdown-item').hide();
-        $(event).parent().find('.dropdown-hidden').hide();
-
-        $(event).parent().find('.dropdown-deploy').text(event.innerText);
-        $(event).parent().find('.dropdown-deploy').show();
-
-        var courseId = event.attributes.value.value;
-        var url = "http://rubypals.com/cmpe235/phpcode/get_students_by_course.php?courseId=" + courseId;
-
-        $("#CourseId").val(courseId);
-
-        $.getJSON(url, function(data) {
-            var items = [];
-
-            $.each(data, function(key, value) {
-                $("#student").append("<a href='#' onclick='showStudentInformation(this)' class='dropdown-item bg-light' id='student" + value.ID + "' value='" + value.ID + "'>" + value.FirstName + " " + value.LastName + "</a> ");
-            });
-
-            $("#student").append("<div class='dropdown-bottom-border'></div>");
-
-            $(".dropdown-item").hide();
-        });
-
-
-        return false;
-    };
-
-    function showStudentInformation(student) {
-
-        $(student).parent().find('.dropdown-item').hide();
-        $(student).parent().find('.dropdown-hidden').hide();
-
-        $(student).parent().find('.dropdown-deploy').text(student.innerText);
-        $(student).parent().find('.dropdown-deploy').show();
-
-        var studentId = student.attributes.value.value;
-
-        $("#StudentId").val(studentId);
-        console.log($("#StudentId").val());
-
-        return false;
-
-    };
-
-    function setCourseDetail(event) {
-
-        $(event).parent().find('.dropdown-item').hide();
-        $(event).parent().find('.dropdown-hidden').hide();
-
-        $(event).parent().find('.dropdown-deploy').text(event.innerText);
-        $(event).parent().find('.dropdown-deploy').show();
-
-        var courseId = event.attributes.value.value;
-        $("#CourseId").val(courseId);
-        $("#ScalingFactorCourseId").val(courseId);
-
-    };
-    $(function() {
-        $('#gr').on('submit', function(e) {
-            e.preventDefault();
-            $.ajax({
-                type: 'post',
-                url: 'http://rubypals.com/phonegapstyle/phpcode/compute_and_save_grade.php',
-                data: $('#gr').serialize(),
-                success: function(data) {
-                    console.log(data);
-                    document.getElementById('totalMarksSaveStatus').innerHTML = "Computed Grade is :" + data.grade + "<br/>Total Grade :" + data.percentage + "%" + "<br/>Marks :" + data.totalMarks;
-                    console.log(data.grade);
-                }
-            });
-
-        });
-
-    });
-
-
-
-    $(document).ready(function() {
-        $("button").click(function() {
-            print()
-        });
-    });
 
     function logout() {
         console.log("logout is called");
         sessionStorage.clear();
         window.location.href = "index.html";
     }
-    // $(document).on("pagecreate", function(event) {
 
-    //     $(".ui-btn").val("");
-
-    // });
+    //for user list
     $(document).on("click", ".openmodal", function(a, b) {
         //debugger;
         $('#modalid').modal('show');
@@ -216,14 +144,53 @@
         //$(".modal-body").html("hello how r u");
     });
 
-    function print() {
-        console.log("courseId=" + $('#CourseId').val() + "&&StudentId=" + $('#StudentId').val() + "&&MHomework=" + $('#MHomework').val() + "&&MLabs=" + $('#MLabs').val() + "&&MProject=" + $('#MProject').val() + "&&MPresentation=" + $('#MPresentation').val() + "&&MMidterm=" + $('#MMidterm').val() + "&&MFinal=" + $('#MFinal').val());
+    function getCurrentEvent(eventid){
+        for (var i = 0; i < events.length; i++) {
+            if (eventid == events[i].eventid) {
+               return events[i];
+            }
+        }
+    };
+    //for edit
+    function edit(event) {
+        //debugger;
+        var eventid = event.attributes.valid.value;
+        console.log(eventid, "        ", event);
+        var currentevent = getCurrentEvent(eventid);
+        console.log("currentevent is ",currentevent);
+        $('#editModal').modal('show');
+        $('#eventname').val(currentevent.name);
+        $('#eventid').val(currentevent.eventid);
+        $('#description').val(currentevent.description);
+        $('#street').val(currentevent.street);
+        $('#city').val(currentevent.city);
+        $('#state').val(currentevent.state);
+        $('#zipcode').val(currentevent.zipcode);
+        $('#date').val(currentevent.date);
+        $('#time').val(currentevent.time);
+        $('#capacity').val(currentevent.maxcapacity);
+
+    }
+
+    //for delete
+    function deleteevent(event) {
+        //debugger;
+        var eventid = event.attributes.valid.value;
+        console.log(eventid, "        ", event);
+        var currentevent = getCurrentEvent(eventid);
+        console.log("currentevent is ",currentevent);
+        if(confirm("Are you sure you want to Delete "+currentevent.eventname)){
+            //api called than reload
+             $('#eventid').val(currentevent.eventid);
+            location.reload();
+
+        }
     }
     </script>
 </head>
 
 <body>
-    <div data-role="page" data-theme="f" style="background-image:url(../images/Embossed_Paper_Logo.jpg); background-size: cover;background-repeat: no-repeat;background-position: center;"> 
+    <div data-role="page" data-theme="f" style="background-image:url(../images/Embossed_Paper_Logo.jpg); background-size: cover;background-repeat: no-repeat;background-position: center;">
         <div data-role="header" data-position="inline" style="background-color:transparent;">
             <h1 id="username" style="color:black; font-weight: bold">Welcome&nbsp;</h1>
             <div data-role="navbar">
@@ -247,19 +214,72 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="modal fade" id="deleteModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button typr="button" class="btn btn-default" data-dismiss="modal">×</button>
+                        <h3>Delete Event</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you </p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div id="editModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Edit Event</h4>
+                    </div>
+                    <form id="gr" name="gr">
+                        <div class="modal-body">
+                            <div style="padding:10px 20px;">
+                                <label for="un" class="ui-hidden-accessible">Event Name:</label>
+                                <input type="text" name="eventname" id="eventname" value="" placeholder="Event Name" data-theme="a">
+                                <label for="text" class="ui-hidden-accessible">Description:</label>
+                                <input type="text" name="description" id="description" value="" placeholder="Description" data-theme="a">
+                                <label for="un" class="ui-hidden-accessible">Street</label>
+                                <input type="text" name="street" id="street" value="" placeholder="Street" data-theme="a">
+                                <label for="un" class="ui-hidden-accessible">City</label>
+                                <input type="text" name="city" id="city" value="" placeholder="City" data-theme="a">
+                                <label for="un" class="ui-hidden-accessible">State</label>
+                                <input type="text" name="state" id="state" value="" placeholder="State" data-theme="a">
+                                <label for="un" class="ui-hidden-accessible">Zipcode</label>
+                                <input type="text" name="zipcode" id="zipcode" value="" placeholder="Zipcode" data-theme="a">
+                                <label for="un" class="ui-hidden-accessible">Date:</label>
+                                <input type="text" name="date" class="dp" id="date" placeholder="mm-dd-yyyy">
+                                <label for="un" class="ui-hidden-accessible">Time:</label>
+                                <input type="text" name="time" id="time" value="" placeholder="Time" data-theme="a">
+                                <label for="un" class="ui-hidden-accessible">Capacity:</label>
+                                <input type="text" name="capacity" id="capacity" value="" placeholder="Capacity" data-theme="a">
+                                <input type="hidden" name="userid" id="userid" value="" placeholder="" data-theme="a">
+                                <input type="hidden" name="eventid" id="eventid" value="" placeholder="" data-theme="a">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" data-theme="b" data-icon="check" class="btn btn-info btn-width-create">Edit Event</button>
+                            <button type="button" class="btn btn-default btn-width" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <a href="index.html" rel="external" data-role="button" data-theme="a" data-icon="power" style="color:#fff; width:30px; height:10px; margin-left:90%;line-height: 0px !important;font-size: 23px;" onclick="logout()"><span style="color:#000; font-size:8px;margin-left:-20px;">Logout</span></a>
         <div data-role="content" data-theme="a" style="background-color:transparent;">
             <div>
-                <table class="table" style="width:100%;color:white;">
+                <table class="ttable" style="width:100%;color:white;">
                     <thead class="thead-inverse" style="width:100%;color:white;">
-                        <tr style="width:100%;">
-                            <th align="left" style="width:20%;">#</th>
-                            <th align="left" style="width:20%;">Event Name</th>
-                            <th align="left" style="width:20%;">Location</th>
-                            <th align="left" style="width:10%;">Date</th>
-                            <th align="left" style="width:10%;">Time</th>
-                            <th align="left" style="width:5%;"></th>
-                            <th align="left" style="width:5%;"></th>
+                        <tr class='ttr' style="width:100%;">
+                            <th class="tth" align="left" style="width:20%;">#</th>
+                            <th class="tth" align="left" style="width:20%;">Event Name</th>
+                            <th class="tth" align="left" style="width:20%;">Location</th>
+                            <th class="tth" align="left" style="width:10%;">Date</th>
+                            <th class="tth" align="left" style="width:10%;">Time</th>
+                            <th class="tth" align="left" style="width:5%;"></th>
+                            <th class="tth" align="left" style="width:5%;"></th>
                         </tr>
                     </thead>
                     <tbody id="table_for_events" style="width:100%;">
@@ -267,8 +287,14 @@
                 </table>
             </div>
         </div>
-        <form id="gr" name="gr">
-            <input type="hidden" style="display:none" name="fromLoginUserName" id="fromLoginUserName">
+        <form id="forinput" name="forinput">
+             <input type="hidden" style="display:none" class= "uidobj" name="userid" id="userid">
+        </form>
+        <form id="gr1" name="gr1">
+            <input type="hidden" style="display:none" name="userid" id="userid">
+            <input type="hidden" style="display:none" name="formLoginUserName" id="formLoginUserName">
+            <input type="hidden" style="display:none" name="eventid" id="eventid">
+            <input type="hidden" style="display:none" name="eventname" id="eventname">
         </form>
         <!-- <div data-role="content" data-theme="a" style="background-color:#000;">
 
