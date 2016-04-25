@@ -1,0 +1,51 @@
+table queries:
+user 
+CREATE TABLE `user` (
+  `id` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `firstname` varchar(45) NOT NULL,
+  `lastname` varchar(45) NOT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `street` varchar(45) DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  `state` varchar(45) DEFAULT NULL,
+  `zipcode` int(11) DEFAULT NULL,
+  `type` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`,`email`),
+  UNIQUE KEY `email_UNIQUE` (`email`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+event
+CREATE TABLE `event` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `description` varchar(45) DEFAULT NULL,
+  `street` varchar(45) NOT NULL,
+  `city` varchar(45) NOT NULL,
+  `state` varchar(45) NOT NULL,
+  `zipcode` int(5) NOT NULL,
+  `date` datetime NOT NULL,
+  `maxcapacity` int(11) NOT NULL,
+  `registeredusers` int(11) DEFAULT NULL,
+  `isfinished` varchar(5) NOT NULL,
+  `organizer` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name_UNIQUE` (`name`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8
+
+
+registeredevents
+CREATE TABLE `registeredevents` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `eventid` varchar(45) NOT NULL,
+  `eventname` varchar(45) NOT NULL,
+  `userid` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `eventname_idx` (`eventname`),
+  CONSTRAINT `eventname` FOREIGN KEY (`eventname`) REFERENCES `event` (`name`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8
+
+INSERT INTO event (name, description, street, city, state, zipcode, date, maxcapacity, registeredusers, isfinished, organizer) VALUES ('E3', 'party', 'street', 'city', 'CA', '94015', '2038-01-19 03:14:07', 100, 20, false, "abc");
