@@ -171,7 +171,7 @@ public class DataBaseConnections {
 	 * 
 	 */
 	public boolean isEventExists(String eventname) throws SQLException {
-		String query = "select id from user where name = ?";
+		String query = "select id from event where name = ?";
 		ps = con.prepareStatement(query);
 		ps.setString(1, eventname);
 		rs = ps.executeQuery();
@@ -186,7 +186,7 @@ public class DataBaseConnections {
 	 * 
 	 */
 	public List<Event> getAllUnfinishedEvents() throws SQLException {
-		List<Event> eventList = new ArrayList<>();
+		List<Event> eventList = new ArrayList<Event>();
 		String query = "select * from event where isfinished = false";
 		ps = con.prepareStatement(query);
 		rs = ps.executeQuery();
@@ -217,12 +217,12 @@ public class DataBaseConnections {
 	 * 
 	 */
 	public boolean insertEvent(String name, String description, String street, String city,
-							  String state, int zipcode, Date date, int maxcapacity,
+							  String state, int zipcode, String date, int maxcapacity,
 							  String organizerName) throws SQLException {
 		int rowCount = 0;
 		String query = "INSERT INTO event (name, description, street, city, state, zipcode,"
 				+ "date, maxcapacity, registeredusers, isfinished, organizer) "
-				+ "VALUES (?,?,?,?,?,?,?,?,0,false,?)";
+				+ "VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 		ps = con.prepareStatement(query);
 		ps.setString(1, name);
 		ps.setString(2, description);
@@ -230,8 +230,10 @@ public class DataBaseConnections {
 		ps.setString(4, city);
 		ps.setString(5, state);
 		ps.setInt(6, zipcode);
-		ps.setDate(7, date);
+		ps.setString(7, date);
 		ps.setInt(8, maxcapacity);
+		ps.setInt(9, 0);
+		ps.setString(10, "false");
 		ps.setString(11, organizerName);
 		rowCount = ps.executeUpdate();
 		
@@ -245,11 +247,12 @@ public class DataBaseConnections {
 	 * 
 	 */
 	public boolean updateEvent(String name, String description, String street, String city,
-							  String state, int zipcode, Date date, int maxcapacity,
+							  String state, int zipcode, String date, int maxcapacity,
 							  String organizerName, String id) throws SQLException {
+
 		int isRowUpdated = 0;
 		String query = "UPDATE event SET name=?, description=?, street=?, city=?, state=?,"
-				+ " zipcode=?, date=?, maxcapacity=?, organizer=? where id=?";
+				+ " zipcode=?, date=?, maxcapacity=? where organizer=? and id=?";
 		ps = con.prepareStatement(query);
 		ps.setString(1, name);
 		ps.setString(2, description);
@@ -257,10 +260,10 @@ public class DataBaseConnections {
 		ps.setString(4, city);
 		ps.setString(5, state);
 		ps.setInt(6, zipcode);
-		ps.setDate(7, date);
+		ps.setString(7, date);
 		ps.setInt(8, maxcapacity);
 		ps.setString(9, organizerName);
-		ps.setString(12, id);
+		ps.setString(10, id);
 		isRowUpdated = ps.executeUpdate();
 				
 		if(isRowUpdated > 0) {
@@ -287,16 +290,16 @@ public class DataBaseConnections {
 			isDeletedFromRegistered = ps.executeUpdate();
 			
 			if(isDeletedFromRegistered > 0) {
-				String userid = rs.getString("userid");
-				query = "select email from user where id = ?";
-				ps = con.prepareStatement(query);
-				ps.setString(1, userid);
-				rs = ps.executeQuery();
-				while(rs.next()) {
+				//String userid = rs.getString("userid");
+				//query = "select email from user where id = ?";
+				//ps = con.prepareStatement(query);
+				//ps.setString(1, userid);
+				//rs = ps.executeQuery();
+				//while(rs.next()) {
 					//TODO: send email to user
-				}
-				return true;
+				//}
 			}
+			return true;
 		}
 		return false;
 	}
@@ -305,7 +308,7 @@ public class DataBaseConnections {
 	 * 
 	 */
 	public List<Event> getEventsCreatedByUser(String userId) throws SQLException {
-		List<Event> eventList = new ArrayList<>();
+		List<Event> eventList = new ArrayList<Event>();
 		String query = "select * from event where organizer = ?";
 		ps = con.prepareStatement(query);
 		ps.setString(1, userId);
@@ -356,14 +359,18 @@ public class DataBaseConnections {
 	 * 
 	 */
 	public List<User> getAllUsersForEvent(int eventId) throws SQLException {
-		List<User> userList = new ArrayList<>();
-		String query = "select userid from registeredevents where eventid = ?";
+		List<User> userList = new ArrayList<User>();
+		List<String> userIds = new ArrayList<String>();
+		String query = "select userid from registeredevents where eventid in (?)";
 		ps = con.prepareStatement(query);
 		ps.setInt(1, eventId);
 		rs = ps.executeQuery();
 		
 		while(rs.next()) {
-			userList.add(this.getUser(rs.getString("userid")));
+			userIds.add(rs.getString(1));
+		}
+		for(String userId : userIds) {
+			userList.add(this.getUser(userId));
 		}
 		return userList;
 	}
@@ -372,7 +379,7 @@ public class DataBaseConnections {
 	 * 
 	 */
 	public List<Event> getAllEventsForUser(String userId) throws SQLException {
-		List<Event> eventList = new ArrayList<>();
+		List<Event> eventList = new ArrayList<Event>();
 		String query = "select eventid from registeredevents where userid = ?";
 		ps = con.prepareStatement(query);
 		ps.setString(1, userId);
