@@ -22,7 +22,7 @@
         console.log(userobj);
         $('#usernamefromlogin').append(userobj.firstName);
 
-         $.getJSON("http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/getallevents", function(data) {
+         $.getJSON("http://54.67.7.167:8080/EazyEventAPI/eazy/events/rest/getallevents", function(data) {
             var items = [];
             events = data;
             console.log("event",events);

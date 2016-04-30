@@ -1,6 +1,5 @@
 package com.eazy.events.rest;
 
-import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -18,26 +17,20 @@ import com.eazy.events.db.DataBaseConnections;
 import com.eazy.events.models.Event;
 import com.eazy.events.models.User;
 
+/**
+ * AALAP bhai request please. aatlu patavo ne.
+ * For input pass form. And set the parameter key as in methods.
+ * 
+ * Users and Events e response ma avse je method ma required hse e. JSON ma hse to object ma thi get kari deje.
+ * 
+ * api path for each method is: /EazyEventAPI/eazy/events/rest/login
+ *  
+ * ***/
+
 @Path("/rest")
 public class RestService {
 	
 	DataBaseConnections db = new DataBaseConnections();
-    
-//    @GET
-//    @Path("/getName")
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public List<User> getAllUsers() throws Exception{
-//        
-//        List<User> users = new ArrayList<>();
-//        User m = new User();
-//        m.setFirstName("Abhi");
-//        m.setLastName("Shah");
-//        users.add(m);
-//        
-//        System.out.println("getAllUsers(): found "+users.size()+" message(s) on DB");
-//        
-//        return users; //do not use Response object because this causes issues when generating XML automatically
-//    }
     
     @POST
     @Path("/login")
@@ -51,6 +44,7 @@ public class RestService {
 			return Response.ok(user, MediaType.APPLICATION_JSON).build();
 			
     	} catch (SQLException e) {
+    		System.out.println(e.getMessage());
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 		}
     }
@@ -74,6 +68,7 @@ public class RestService {
 			return Response.ok().build();
 			
     	} catch (SQLException e) {
+    		System.out.println(e.getMessage());
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 		}
     }
@@ -81,12 +76,18 @@ public class RestService {
     //---- Events ----//
     @POST
     @Path("/createevent")
-    public Response createEvent(@FormParam("eventname") String eventname,
+    public Response createEvent(@FormParam("eventname") String eventname, @FormParam("time") String time,
     					  @FormParam("description") String description, @FormParam("street") String street,
     					  @FormParam("city") String city, @FormParam("state") String state,
-    					  @FormParam("zipcode") int zipcode, @FormParam("date") Date date,
+    					  @FormParam("zipcode") int zipcode, @FormParam("date") String dateString,
     					  @FormParam("maxcapacity") int maxcapacity, @FormParam("organizer") String organizerName) {
     	try {
+//    		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm");
+//    		LocalDateTime date1 = LocalDateTime.parse(dateString+" "+time, formatter);
+//    		//java.util.Date date1 = formatter.parse(dateString +" "+ time);
+//    		Date date = new Date(Date.from(date1.atZone(ZoneId.systemDefault()).toInstant()).getTime());
+//    		//Date date = Date.valueOf(date1.toString());
+    		String date = dateString.trim() +" "+ time.trim();
     		if(db.isEventExists(eventname)){
     			return Response.status(Response.Status.CONFLICT).build();
     		}
@@ -99,6 +100,7 @@ public class RestService {
 			return Response.ok().build();
 			
     	} catch (SQLException e) {
+    		System.out.println(e.getMessage());
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 		}
     }
@@ -117,6 +119,7 @@ public class RestService {
 	        	return Response.ok(eventsEntity, MediaType.APPLICATION_JSON).build();
 	        }
 		} catch (SQLException e) {
+			System.out.println(e.getMessage());
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 		}
         return Response.status(Response.Status.NOT_FOUND).build();
@@ -124,14 +127,15 @@ public class RestService {
     
     @DELETE
     @Path("/deleteevent")
-    public Response deleteEvent(@FormParam("eventid") int eventId) {
+    public Response deleteEvent(@FormParam("eventid") String eventId) {
     	try {
-    		if(db.deleteEvent(eventId)){
+    		if(db.deleteEvent(Integer.valueOf(eventId))){
     			return Response.status(Response.Status.OK).build();
     		}
 			return Response.status(Response.Status.NOT_MODIFIED).build();
 			
     	} catch (SQLException e) {
+    		System.out.println(e.getMessage());
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 		}
     }
@@ -149,18 +153,20 @@ public class RestService {
 			}
     		return Response.status(Response.Status.NOT_FOUND).build();
     	} catch (SQLException e) {
+    		System.out.println(e.getMessage());
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 		}
     }
     
     @POST
     @Path("/updateevent")
-    public Response createEvent(@FormParam("eventid") String eventId, @FormParam("eventname") String eventname,
+    public Response updateEvent(@FormParam("eventid") String eventId, @FormParam("eventname") String eventname,
     					  @FormParam("description") String description, @FormParam("street") String street,
     					  @FormParam("city") String city, @FormParam("state") String state,
-    					  @FormParam("zipcode") int zipcode, @FormParam("date") Date date,
+    					  @FormParam("zipcode") int zipcode, @FormParam("date") String dateString, @FormParam("time") String time,
     					  @FormParam("maxcapacity") int maxcapacity, @FormParam("organizer") String organizerName) {
     	try {
+    		String date = dateString + " " + time;
     		boolean isEventUpdated = db.updateEvent(eventname, description, 
     					street, city, state, zipcode, date, maxcapacity, organizerName, eventId);
     		
@@ -170,6 +176,7 @@ public class RestService {
 			return Response.ok().build();
 			
     	} catch (SQLException e) {
+    		System.out.println(e.getMessage());
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 		}
     }
@@ -190,6 +197,7 @@ public class RestService {
 			return Response.status(Response.Status.NOT_MODIFIED).build();
 			
     	} catch (SQLException e) {
+    		System.out.println(e.getMessage());
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 		}
     }
@@ -207,6 +215,25 @@ public class RestService {
 			}
     		return Response.status(Response.Status.NOT_FOUND).build();
     	} catch (SQLException e) {
+    		System.out.println(e.getMessage());
+			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+		}
+    }
+    
+    @POST
+    @Path("/getregisteredusersforevent")
+    public Response getRegisteredUserForEvent(@FormParam("eventid") String eventId) {
+    	List<User> userList;
+		GenericEntity<List<User>> usersEntity;
+    	try {
+    		userList = db.getAllUsersForEvent(Integer.valueOf(eventId));
+			if(userList.size() > 0){
+				usersEntity  = new GenericEntity<List<User>>(userList) {};
+	        	return Response.ok(usersEntity, MediaType.APPLICATION_JSON).build();
+			}
+    		return Response.ok().build();
+    	} catch (SQLException e) {
+    		System.out.println(e.getMessage());
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 		}
     }

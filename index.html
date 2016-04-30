@@ -23,7 +23,7 @@
             e.preventDefault();
             $.ajax({
                 type: 'post',
-                url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/login',
+                url: 'http://54.67.7.167:8080/EazyEventAPI/eazy/events/rest/login',
                 data: $('#gr').serialize(),
                 error: function(xhr, status) {
                     if(xhr.status == "404")
