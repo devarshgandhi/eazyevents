@@ -87,7 +87,7 @@
     $(document).on("pagebeforecreate", function() {
         $('#fromLoginUnName').append(userobj.firstName);
         //$.getJSON("http://rubypals.com/cmpe235/phpcode/get_course.php", function(data) {
-        $.getJSON("54.67.7.167:8080/EazyEventAPI/eazy/events/rest/getallevents", function(data) {
+        $.getJSON("http://54.67.7.167:8080/EazyEventAPI/eazy/events/rest/getallevents", function(data) {
             var items = [];
             events = data;
             $.each(events, function(key, value) {
