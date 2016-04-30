@@ -130,7 +130,7 @@
                     console.log("date is : ",date,"time is : ",time);
 
                     keyvalue = keyvalue + 1;
-                    $("#table_for_events").append("<tr class='ttr'><td class='ttd' style='width:20%;padding:10px 0px;'> " + keyvalue + "</td><td class='ttd' style='width:20%;padding:10px 0px;'><a href='#' class='ttd' data-toggle='modal' class='openmodal' onclick='openeventdetails(this)' valid=" + value.eventid + " >" + value.name + "</a></td><td class='ttd' style='width:20%;padding:10px 0px;'>" + value.street + " , " + value.city + " , " + value.state + " , " + value.zipcode + "</td><td class='ttd' style='width:20%;padding:10px 0px;''>" + date + "</td><td class='ttd' style='width:10%;padding:10px 0px;'>" + value.time + "</td><td class='ttd' style='width:5%;padding:10px 0px;'> <a href='#' data-toggle='modal' class='editmodal' valid=" + value.eventid + " onclick='edit(this)'><span class='glyphicon glyphicon-edit'></span></a></td><td class='ttd' style='width:5%;padding:10px 0px;'> <a href='#' onclick='deleteevent(this)' valid=" + value.eventid + " ><span class='glyphicon glyphicon-trash'></span></a></td></tr>");
+                    $("#table_for_events").append("<tr class='ttr'><td class='ttd' style='width:10%;padding:10px 0px;'> " + keyvalue + "</td><td class='ttd' style='width:20%;padding:10px 0px;'><a href='#' class='ttd' data-toggle='modal' class='openmodal' onclick='openeventdetails(this)' valid=" + value.eventid + " >" + value.name + "</a></td><td class='ttd' style='width:20%;padding:10px 0px;'>" + value.street + " , " + value.city + " , " + value.state + " , " + value.zipcode + "</td><td class='ttd' style='width:15%;padding:10px 0px;''>" + date + "</td><td class='ttd' style='width:15%;padding:10px 0px;'>" + value.time + "</td><td class='ttd' style='width:10%;padding:10px 0px;'>" + value.maxcapacity + "</td><td class='ttd' style='width:5%;padding:10px 0px;'> <a href='#' data-toggle='modal' class='editmodal' valid=" + value.eventid + " onclick='edit(this)'><span class='glyphicon glyphicon-edit'></span></a></td><td class='ttd' style='width:5%;padding:10px 0px;'> <a href='#' onclick='deleteevent(this)' valid=" + value.eventid + " ><span class='glyphicon glyphicon-trash'></span></a></td></tr>");
                 })
             },
             error: function(xhr, status) {
@@ -364,11 +364,12 @@
                 <table class="ttable" style="width:100%;color:white;">
                     <thead class="thead-inverse" style="width:100%;color:white;">
                         <tr class='ttr' style="width:100%;">
-                            <th class="tth" align="left" style="width:20%;">#</th>
+                            <th class="tth" align="left" style="width:10%;">#</th>
                             <th class="tth" align="left" style="width:20%;">Event Name</th>
                             <th class="tth" align="left" style="width:20%;">Location</th>
-                            <th class="tth" align="left" style="width:10%;">Date</th>
-                            <th class="tth" align="left" style="width:10%;">Time</th>
+                            <th class="tth" align="left" style="width:15%;">Date</th>
+                            <th class="tth" align="left" style="width:15%;">Time</th>
+                            <th class="tth" align="left" style="width:10%;">Capacity</th>
                             <th class="tth" align="left" style="width:5%;"></th>
                             <th class="tth" align="left" style="width:5%;"></th>
                         </tr>
