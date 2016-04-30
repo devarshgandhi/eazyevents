@@ -26,7 +26,6 @@
                 url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/login',
                 data: $('#gr').serialize(),
                 error: function(xhr, status) {
-                    debugger;
                     if(xhr.status == "404")
                         alert("UserName or Password is wrong");
                      if (xhr.status == "500") {
@@ -34,7 +33,6 @@
                     }
                 },
                 success: function(data, xhr) {
-                    debugger;
                     setTimeout(function(){
                         sessionStorage.setItem("userObject",JSON.stringify(data));
                          if (data.type == "admin")
@@ -69,13 +67,6 @@
                     <label for="name">Password:</label>
                     <input type="password" name="password" id="password" value="" />
                 </div>
-               <!--  <div data-role="fieldcontain">
-                    <label for="slider2" style="width:200px;">Account Type:</label>
-                    <select name="slider2" id="flip-c" data-role="slider" style="width:100px;">
-                        <option value="student">User </option>
-                        <option value="professor">Admin </option>
-                    </select>
-                </div> -->
                 <div data-role="fieldcontain" id="error_container" style="color:red;display:block">
                 </div>
                 <div class="ui-body ui-body-b">

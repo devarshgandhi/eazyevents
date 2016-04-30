@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+    $(document).bind('mobileinit', function() {
+        $.mobile.changePage.defaults.changeHash = false;
+        $.mobile.hashListeningEnabled = false;
+        $.mobile.pushStateEnabled = false;
+    });
+    </script>
     <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="scripts/jquery.timepicker.css" />
@@ -87,47 +94,62 @@
     </style>
     <script>
     $(document).on("pagebeforecreate", function() {
-        $('#date').datepicker();
-        $('#time').timepicker();
+        $('#date').datepicker({dateFormat: "yy-mm-dd"});
+        $('#time').timepicker({timeFormat: "H:i"});
     });
+    var userobj = $.parseJSON(sessionStorage.getItem("userObject"));
+    var events = [];
+    $(function() {
 
-   $(function(){
-      var userobj = $.parseJSON(sessionStorage.getItem("userObject"));
         console.log(userobj);
-        console.log("ddd        ",userobj.userId)
+        console.log("ddd        ", userobj.userId)
         var uid = userobj.userId;
-        debugger;
+
         $('.uidobj').val(userobj.userId);
-        //$('#formLoginUserName').value("a1");
         $('#username').append(userobj.firstName);
+        events = [];
+        var keyvalue = 0;
+        $.ajax({
+            type: 'post',
+            url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/geteventscreatedbyuser',
+            data: $('#forinput').serialize(),
+            success: function(data) {
+                console.log("the data is ", data);
+                events = data;
 
-    var events;
-    var keyvalue = 0;
-    $.ajax({
-        type: 'post',
-        url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/geteventscreatedbyuser',
-        data: $('#forinput').serialize(),
-        success: function(data) {
-            console.log("the data is ", data);
-            events = data;
 
+                $.each(events, function(key, value) {
 
-            $.each(events, function(key, value) {
-                debugger;
-                 var date,time,temp;
-                temp = new Date(value.date);
-                 date=temp.toLocaleDateString();
-                time = temp.toLocaleTimeString();
-                //console.log(value);
-                keyvalue = keyvalue + 1;
-                $("#table_for_events").append("<tr class='ttr'><td class='ttd' style='width:20%;padding:10px 0px;'> " + keyvalue + "</td><td class='ttd' style='width:20%;padding:10px 0px;'><a href='#' class='ttd' data-toggle='modal' class='openmodal' href='#addBookDialog'>" + value.name + "</a></td><td class='ttd' style='width:20%;padding:10px 0px;'>" + value.street + " , "+value.city+" , " + value.state + " , "+value.zipcode+"</td><td class='ttd' style='width:20%;padding:10px 0px;''>" + date + "</td><td class='ttd' style='width:10%;padding:10px 0px;'>" + time + "</td><td class='ttd' style='width:5%;padding:10px 0px;'> <a href='#' data-toggle='modal' class='editmodal' valid=" + value.eventid + " onclick='edit(this)'><span class='glyphicon glyphicon-edit'></span></a></td><td class='ttd' style='width:5%;padding:10px 0px;'> <a href='#' onclick='deleteevent(this)' valid=" + value.eventid + " ><span class='glyphicon glyphicon-trash'></span></a></td></tr>");
-            })
-        },
-        error:function(xhr,status){
-                debugger;
+                    var date, time, temp,temp2;
+                    console.log("value date : ",value.date,value.time);
+                    temp = new Date(value.date);
+
+                    console.log(temp);
+                    date = temp.toLocaleDateString();
+
+                    console.log("date is : ",date,"time is : ",time);
+
+                    keyvalue = keyvalue + 1;
+                    $("#table_for_events").append("<tr class='ttr'><td class='ttd' style='width:20%;padding:10px 0px;'> " + keyvalue + "</td><td class='ttd' style='width:20%;padding:10px 0px;'><a href='#' class='ttd' data-toggle='modal' class='openmodal' onclick='openeventdetails(this)' valid=" + value.eventid + " >" + value.name + "</a></td><td class='ttd' style='width:20%;padding:10px 0px;'>" + value.street + " , " + value.city + " , " + value.state + " , " + value.zipcode + "</td><td class='ttd' style='width:20%;padding:10px 0px;''>" + date + "</td><td class='ttd' style='width:10%;padding:10px 0px;'>" + value.time + "</td><td class='ttd' style='width:5%;padding:10px 0px;'> <a href='#' data-toggle='modal' class='editmodal' valid=" + value.eventid + " onclick='edit(this)'><span class='glyphicon glyphicon-edit'></span></a></td><td class='ttd' style='width:5%;padding:10px 0px;'> <a href='#' onclick='deleteevent(this)' valid=" + value.eventid + " ><span class='glyphicon glyphicon-trash'></span></a></td></tr>");
+                })
+            },
+            error: function(xhr, status) {
+
             }
+        });
     });
-});
+
+
+    function getCurrentEvent(eventid) {
+        for (var i = 0; i < events.length; i++) {
+            if (eventid == events[i].eventid) {
+                return events[i];
+            }
+        }
+    };
+
+
+
 
 
     function logout() {
@@ -136,31 +158,61 @@
         window.location.href = "index.html";
     }
 
-    //for user list
-    $(document).on("click", ".openmodal", function(a, b) {
-        //debugger;
-        $('#modalid').modal('show');
-        //var myBookId = $(this).data('id');
-        //$(".modal-body").html("hello how r u");
-    });
 
-    function getCurrentEvent(eventid){
-        for (var i = 0; i < events.length; i++) {
-            if (eventid == events[i].eventid) {
-               return events[i];
+
+    function openeventdetails(event) {
+
+
+        var eventid = event.attributes.valid.value;
+        var currentevent = getCurrentEvent(eventid);
+
+        $('#eventid').val(currentevent.eventid);
+        $.ajax({
+            type: 'post',
+            url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/getregisteredusersforevent',
+            data: $('#eventdetailform').serialize(),
+            error: function(xhr, status) {
+                //debugger;
+                console.log(status);
+                //alert("Event Created!");
+                //$('#modalid').modal('hide');
+            },
+            success: function(data, xhr) {
+
+                var keyvalue = 0;
+                console.log("success: ",data);
+                console.log(data);
+
+                $("#eventdetailmodal").on('shown', function() {
+                    $("#modal-body-event ul").append("<li>Hello World </li>");
+                    $.each(data, function(key, value) {
+                        //console.log(value);
+                        //debugger;
+                        keyvalue = keyvalue + 1;
+
+                        $("#modal-body-event ul").append("<li>" + value.firstName + "</li><li>" + value.lastName + "</li>");
+                    })
+                });
+                // alert("Event Created!");
+                // $('#modalid').modal('hide');
+                //location.reload();
             }
-        }
+
+        });
+
     };
+
+
     //for edit
     function edit(event) {
         //debugger;
         var eventid = event.attributes.valid.value;
         console.log(eventid, "        ", event);
         var currentevent = getCurrentEvent(eventid);
-        console.log("currentevent is ",currentevent);
-        $('#editModal').modal('show');
+        console.log("currentevent is ", currentevent);
+        $('#edittabledataModal').modal('show');
         $('#eventname').val(currentevent.name);
-        $('#eventid').val(currentevent.eventid);
+        $('#editEventid').val(currentevent.eventid);
         $('#description').val(currentevent.description);
         $('#street').val(currentevent.street);
         $('#city').val(currentevent.city);
@@ -168,7 +220,32 @@
         $('#zipcode').val(currentevent.zipcode);
         $('#date').val(currentevent.date);
         $('#time').val(currentevent.time);
-        $('#capacity').val(currentevent.maxcapacity);
+        $('#maxcapacity').val(currentevent.maxcapacity);
+        $('#organizer').val(userobj.userId);
+        $('#edittabledataModal').on('submit', function(e) {
+            e.preventDefault();
+
+            $.ajax({
+                type: 'post',
+                url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/updateevent',
+                data: $('#editmodal').serialize(),
+                error: function(xhr, status) {
+
+                    console.log(status);
+                    //alert("Event Created!");
+                    $('#myModal').modal('hide');
+                },
+                success: function(data, xhr) {
+
+                    console.log("sucess", data);
+
+                    //alert("Event Created!");
+                    $('#editmodal').modal('hide');
+                    location.reload();
+                }
+
+            });
+        });
 
     }
 
@@ -178,11 +255,35 @@
         var eventid = event.attributes.valid.value;
         console.log(eventid, "        ", event);
         var currentevent = getCurrentEvent(eventid);
-        console.log("currentevent is ",currentevent);
-        if(confirm("Are you sure you want to Delete "+currentevent.eventname)){
+
+        console.log("currentevent is ", currentevent);
+        $('#eventid').val(currentevent.eventid);
+        if (confirm("Are you sure you want to Delete " + currentevent.name)) {
             //api called than reload
-             $('#eventid').val(currentevent.eventid);
-            location.reload();
+
+            $.ajax({
+                type: 'delete',
+                url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/deleteevent',
+                data: $('#deleteeventform').serialize(),
+                error: function(xhr, status) {
+
+                    console.log(status);
+                    //alert("Event Created!");
+                    $('#myModal').modal('hide');
+                },
+                success: function(data, xhr) {
+
+                    console.log("sucess", data);
+
+                    //alert("Event Created!");
+                    $('#myModal').modal('hide');
+                    location.reload();
+                }
+
+            });
+
+
+
 
         }
     }
@@ -201,40 +302,33 @@
                 </ul>
             </div>
         </div>
-        <div class="modal fade" id="modalid">
+        <form id="eventdetailform" name="eventdetailform">
+            <input type="hidden" name="eventid" id="eventid" value="" placeholder="" data-theme="a">
+        </form>
+        <div class="modal fade" id="eventdetailmodal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button typr="button" class="btn btn-default" data-dismiss="modal">×</button>
-                        <h3>Modal header</h3>
+                        <h3>Registered User</h3>
                     </div>
-                    <div class="modal-body">
-                        <p>some content</p>
+                    <div class="modal-body-event">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-width" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div class="modal fade" id="deleteModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button typr="button" class="btn btn-default" data-dismiss="modal">×</button>
-                        <h3>Delete Event</h3>
-                    </div>
-                    <div class="modal-body">
-                        <p>Are you sure you </p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <div id="editModal" class="modal fade" role="dialog">
+        <div id="edittabledataModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">Edit Event</h4>
                     </div>
-                    <form id="gr" name="gr">
+                    <form id="editmodal" name="editmodal">
                         <div class="modal-body">
                             <div style="padding:10px 20px;">
                                 <label for="un" class="ui-hidden-accessible">Event Name:</label>
@@ -254,9 +348,9 @@
                                 <label for="un" class="ui-hidden-accessible">Time:</label>
                                 <input type="text" name="time" id="time" value="" placeholder="Time" data-theme="a">
                                 <label for="un" class="ui-hidden-accessible">Capacity:</label>
-                                <input type="text" name="capacity" id="capacity" value="" placeholder="Capacity" data-theme="a">
-                                <input type="hidden" name="userid" id="userid" value="" placeholder="" data-theme="a">
-                                <input type="hidden" name="eventid" id="eventid" value="" placeholder="" data-theme="a">
+                                <input type="text" name="maxcapacity" id="maxcapacity" value="" placeholder="Capacity" data-theme="a">
+                                <input type="hidden" name="organizer" id="organizer" value="" placeholder="" data-theme="a">
+                                <input type="hidden" name="eventid" id="editEventid" value="" placeholder="" data-theme="a">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -288,89 +382,17 @@
             </div>
         </div>
         <form id="forinput" name="forinput">
-             <input type="hidden" style="display:none" class= "uidobj" name="userid" id="userid">
+            <input type="hidden" style="display:none" class="uidobj" name="userid" id="userid">
         </form>
         <form id="gr1" name="gr1">
             <input type="hidden" style="display:none" name="userid" id="userid">
             <input type="hidden" style="display:none" name="formLoginUserName" id="formLoginUserName">
-            <input type="hidden" style="display:none" name="eventid" id="eventid">
+            <!-- <input type="hidden" style="display:none" name="eventid" id="eventid"> -->
             <input type="hidden" style="display:none" name="eventname" id="eventname">
         </form>
-        <!-- <div data-role="content" data-theme="a" style="background-color:#000;">
-
-    <h1 style="color:#fff;">Course</h1>
-    <p style="color:#fff;"> Please select the Event number</p>
-    <div class="dropdown-menu" id="course" style="background-color:#fff;">
-        <a href="#" class="dropdown-deploy" style="background-color:#fff;"><em class="left-dropdown bg-dark"></em>Select Course Number</a>
-        <a href="#" class="dropdown-hidden" style="background-color:#fff;"><em class="left-dropdown bg-dark"></em>Hide Course Number</a>
-    </div>
-    <h1 style="color:#fff;">Student</h1>
-    <p style="color:#fff;"> Please select the User </p>
-    <div class="dropdown-menu" id="student" style="background-color:#fff;">
-        <a href="#" class="dropdown-deploy" style="background-color:#fff;"><em class="left-dropdown bg-dark"></em>Select Student</a>
-        <a href="#" class="dropdown-hidden" style="background-color:#fff;"><em class="left-dropdown bg-dark"></em>Hide Student</a>
-    </div>
-    <h1 style="color:#fff;">Marks</h1>
-    <div class="toggle-container-v4">
-        <div class="toggle-v4">
-            <a href="#" class="show-toggle-v4" style="display: none;">Marks</a>
-            <a href="#" class="hide-toggle-v4" style="display: block;">Marks</a>
-            <div class="clear"></div>
-            <div class="toggle-content-v4" style="display: none;">
-                <form name="gr" id="gr">
-                    <fieldset>
-                        <input type="hidden" name="CourseId" type="number" style="display: none;" id="CourseId">
-                        <input type="hidden" name="StudentId" type="number" style="display: none;" id="StudentId">
-                        <div class="fieldcontain">
-                            <label class="field-title gradeTextField" for="sHomeworkField">Homework:<span>(required)</span>
-                            </label>
-                            <input type="range" name="MHomework" id="MHomework" value="60" min="0" max="100" data-highlight="true" data-mini="true" />
-                        </div>
-                        <div class="fieldcontain">
-                            <label class="field-title gradeTextField" for="sLabsField">Lab:<span>(required)</span>
-                            </label>
-                            <input type="range" name="MLabs" id="MLabs" value="60" min="0" max="100" data-highlight="true" data-mini="true">
-                        </div>
-                        <div class="fieldcontain">
-                            <label class="field-title gradeTextField" for="sProjectField">Project:<span>(required)</span>
-                            </label>
-                            <input type="range" name="MProject" id="MProject" value="60" min="0" max="100" data-highlight="true" data-mini="true">
-                        </div>
-                        <div class="fieldcontain">
-                            <label class="field-title gradeTextField" for="sPresentationField">Presentation:<span>(required)</span>
-                            </label>
-                            <input type="range" name="MPresentation" id="MPresentation" value="60" min="0" max="100" data-highlight="true" data-mini="true">
-                        </div>
-                        <div class="fieldcontain">
-                            <label class="field-title gradeTextField" for="sMidtermField">Midterm:<span>(required)</span>
-                            </label>
-                            <input type="range" name="MMidterm" id="MMidterm" value="60" min="0" max="100" data-highlight="true" data-mini="true">
-                        </div>
-                        <div class="fieldcontain">
-                            <label class="field-title gradeTextField" for="sFinalField">Final:<span>(required)</span>
-                            </label>
-                            <input type="range" name="MFinal" id="MFinal" value="60" min="0" max="100" data-highlight="true" data-mini="true">
-                        </div>
-                    </fieldset>
-                    <fieldset class="ui-grid-a">
-                        <div class="ui-block-a">
-                            <button type="submit" data-theme="c">Save</button>
-                        </div>
-                        <div class="ui-block-b">
-                            <button type="reset" data-theme="f">Cancel</button>
-                        </div>
-                    </fieldset>
-                </form>
-                <div class="clear"></div>
-                <label id="totalMarksSaveStatus" style="font:bold  20px; color:#000;"></label>
-            </div>
-        </div>
-    </div>
-</div>
-<p>
-</p>
-</div>
- -->
+        <form id="deleteeventform" name="deleteeventform">
+            <input type="hidden" name="eventid" id="eventid" value="" placeholder="" data-theme="a">
+        </form>
     </div>
 </body>
 

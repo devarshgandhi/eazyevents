@@ -24,7 +24,6 @@
 
          $.getJSON("http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/getallevents", function(data) {
             var items = [];
-            debugger;
             events = data;
             console.log("event",events);
             $.each(events, function(key, value) {
@@ -32,18 +31,13 @@
                 temp = new Date(value.date);
                 date=temp.toLocaleDateString();
                 time = temp.toLocaleTimeString();
-                debugger;
                 $("#course").append("<a href='#' onclick='setEventToRegister(value)' class='dropdown-item bg-light' id='course" + value.eventId + "' value='" + value.eventId + "'>" + value.name + "</a><div class='dropdown-item event-details' id='courseDesc" + value.eventId + "'> " + value.description + "</div>" + "</a><div class='dropdown-item event-details' id='locationname" + value.eventId + "'> " + value.street + " , "+value.city+" , " + value.state + " , "+value.zipcode+"</div>" + "<div class='dropdown-item event-details' id='time1" + value.eventId + "'> " + date + "</div><div class='dropdown-item event-details' id='time1" + value.eventId + "'> " + time + "</div>" + "<div class='dropdown-item event-details' id='capacity1" + value.eventId + "'> " + value.maxcapacity + "</div><hr>");
             });
-            //console.log("Events: ", events);
-            //$("#course").append("<div class='dropdown-bottom-border'></div>");
+
             function setEventToRegister(event){
                 console.log("event: ",event);
             }
 
-
-            //$(".dropdown-item").hide();
-            //$(".event-details").hide();
         });
 
 
@@ -73,7 +67,6 @@
             <a href="index.html" rel="external" data-role="button" data-theme="a" data-icon="gear" style="color:#fff; width:30px; height:10px; margin-left:90%;line-height: 0px !important;font-size: 23px;" onclick="logout()"><span style="color:#000; font-size:8px;margin-left:-20px;">Logout</span></a>
             <div data-role="collapsible" data-theme="a" data-content-theme="b">
                 <h3>Upcoming Events</h3>
-                <!-- <span style="text-shadow: 10px 10px 10px red; font-size:30px; margin-left:15%;"><b>COOL PROFESSOR SINN</b></span> -->
                 <div id="course"></div>
                 <p>
                 </p>

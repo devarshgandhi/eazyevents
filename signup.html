@@ -28,7 +28,7 @@
                         window.location.href = "index.html";
                     }
                 },error: function(xhr, status) {
-                    debugger;
+
                     console.log("status", status,"   ",xhr);
                      if (xhr.status == "409") {
                          alert("User Name already exists");
