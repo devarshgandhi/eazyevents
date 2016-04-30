@@ -169,7 +169,7 @@
         $('#eventid').val(currentevent.eventid);
         $.ajax({
             type: 'post',
-            url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/getregisteredusersforevent',
+            url: 'http://54.67.7.167:8080/EazyEventAPI/eazy/events/rest/getregisteredusersforevent',
             data: $('#eventdetailform').serialize(),
             error: function(xhr, status) {
                 //debugger;
@@ -224,7 +224,7 @@
 
             $.ajax({
                 type: 'post',
-                url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/updateevent',
+                url: 'http://54.67.7.167:8080/EazyEventAPI/eazy/events/rest/updateevent',
                 data: $('#editmodal').serialize(),
                 error: function(xhr, status) {
 
@@ -260,7 +260,7 @@
 
             $.ajax({
                 type: 'delete',
-                url: 'http://10.0.0.156:8080/EazyEventAPI/eazy/events/rest/deleteevent',
+                url: 'http://54.67.7.167:8080/EazyEventAPI/eazy/events/rest/deleteevent',
                 data: $('#deleteeventform').serialize(),
                 error: function(xhr, status) {
 
